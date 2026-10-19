@@ -1,0 +1,398 @@
+[gd_scene format=3 uid="uid://ch87a0h64adpb"]
+
+[ext_resource type="PackedScene" uid="uid://dbjryr0ut61rl" path="res://Sceans/platforms.tscn" id="1_6b77o"]
+[ext_resource type="PackedScene" uid="uid://bra6xarc02te0" path="res://Sceans/character_body_2d.tscn" id="2_jdpn2"]
+[ext_resource type="Script" uid="uid://dnofon2dqlbhs" path="res://Scripts/hidden_platform.gd" id="3_7cgqg"]
+[ext_resource type="Texture2D" uid="uid://cto8l7b685mbg" path="res://Assets/Platforms/untitled-pixel-art@4x (2).png" id="4_wg2m7"]
+[ext_resource type="PackedScene" uid="uid://bh7nnqjfjojtk" path="res://Sceans/kill_block.tscn" id="5_wr2op"]
+[ext_resource type="FontFile" uid="uid://cbreb82wgeiss" path="res://Assets/Fonts/Picsue Sans Trial.otf" id="6_jbshr"]
+[ext_resource type="FontFile" uid="uid://hp4p3coyoqmm" path="res://Assets/Fonts/The Bandit and the Lone Rider.ttf" id="7_dhw5g"]
+[ext_resource type="Script" uid="uid://bfafiulp6ylua" path="res://Scripts/portal_6.gd" id="8_7yij0"]
+[ext_resource type="Texture2D" uid="uid://do0s7xplrma6q" path="res://Assets/other/icon.svg" id="9_vs2i3"]
+[ext_resource type="Texture2D" uid="uid://bvf6e5xjln6ex" path="res://Assets/Platforms/untitled-pixel-art@4x.png" id="10_wcr0j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dybgl"]
+size = Vector2(595, 197.47714)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a6qkt"]
+size = Vector2(600, 206)
+
+[sub_resource type="LabelSettings" id="LabelSettings_a6qkt"]
+font = ExtResource("6_jbshr")
+font_size = 28
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_ck76l"]
+font = ExtResource("7_dhw5g")
+font_size = 56
+font_color = Color(0, 0, 0, 1)
+outline_size = 7
+outline_color = Color(0.74509805, 0.2, 0.1882353, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xc61n"]
+size = Vector2(92, 84)
+
+[node name="level_6" type="Node2D" unique_id=2137289699]
+
+[node name="Platforms" parent="." unique_id=88795311 instance=ExtResource("1_6b77o")]
+z_index = 2
+position = Vector2(828, -947)
+scale = Vector2(0.08, 0.08)
+
+[node name="Player" parent="." unique_id=1165395594 instance=ExtResource("2_jdpn2")]
+position = Vector2(794, -1000)
+
+[node name="Platforms2" parent="." unique_id=1166319044 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(682, -947)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms3" parent="." unique_id=1098123044 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(408, -1061)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms4" parent="." unique_id=1926741878 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(799, -1149)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms5" parent="." unique_id=758844218 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(415, -1277)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms6" parent="." unique_id=260094209 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(339.00003, -1129)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms7" parent="." unique_id=2046010446 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(339.00003, -1322)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms8" parent="." unique_id=2004873719 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(322, -1396)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms9" parent="." unique_id=798339396 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-27, -1394)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms10" parent="." unique_id=1241743510 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-280, -1264)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms11" parent="." unique_id=854570638 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-488.99997, -1316)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms12" parent="." unique_id=1972630783 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-147, -1071)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms13" parent="." unique_id=1503454036 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-488.99997, -1131)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms14" parent="." unique_id=1243774605 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-301, -903)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms15" parent="." unique_id=1047213145 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-502, -903)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms16" parent="." unique_id=804330509 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-856, -999)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms17" parent="." unique_id=274648411 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-1057, -999)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms18" parent="." unique_id=1040235973 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-664, -1133)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms19" parent="." unique_id=1972845552 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-971, -1250)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms20" parent="." unique_id=361269324 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-649, -1315.0001)
+scale = Vector2(-0.015, -0.015)
+
+[node name="Platforms21" parent="." unique_id=509772244 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-820, -1430)
+scale = Vector2(-0.01, -0.01)
+
+[node name="Platforms22" parent="." unique_id=50179324 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-603, -1453)
+scale = Vector2(-0.01, -0.01)
+
+[node name="Platforms23" parent="." unique_id=837535868 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-447, -1582)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms24" parent="." unique_id=1028634545 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-420, -1264)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms25" parent="." unique_id=652045681 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-87, -1669)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms27" parent="." unique_id=1866768107 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(237, -1766)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms28" parent="." unique_id=1058793768 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(487, -2162)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms29" parent="." unique_id=962871009 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(551, -1979)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms31" parent="." unique_id=30931794 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-41, -1896)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms32" parent="." unique_id=543217083 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(284.00006, -2063)
+scale = Vector2(-0.015, -0.015)
+
+[node name="Platforms33" parent="." unique_id=727975402 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(186, -1983)
+scale = Vector2(-0.015, -0.015)
+
+[node name="Platforms34" parent="." unique_id=849058458 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(825, -1842)
+scale = Vector2(-0.015, -0.015)
+
+[node name="Platforms35" parent="." unique_id=682134538 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(826, -1691)
+scale = Vector2(-0.015, -0.015)
+
+[node name="Platforms36" parent="." unique_id=1320676887 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(880, -1926)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms37" parent="." unique_id=2026756066 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(880, -1768)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms30" parent="." unique_id=1563745318 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(915, -1482)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms38" parent="." unique_id=2051967407 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(790, -1842)
+scale = Vector2(-0.015, -0.015)
+
+[node name="HiddenPlatform" type="StaticBody2D" parent="." unique_id=1329033391]
+z_index = 1
+position = Vector2(-44, -532)
+scale = Vector2(3.94, 3.94)
+script = ExtResource("3_7cgqg")
+
+[node name="Sprite2D" type="Sprite2D" parent="HiddenPlatform" unique_id=899790779]
+texture_filter = 1
+position = Vector2(-10.78683, 18.908619)
+scale = Vector2(5.1495075, 4.526887)
+texture = ExtResource("4_wg2m7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HiddenPlatform" unique_id=1484581180]
+position = Vector2(0.5, 100.26141)
+shape = SubResource("RectangleShape2D_dybgl")
+
+[node name="TriggerArea" type="Area2D" parent="HiddenPlatform" unique_id=2124245878]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HiddenPlatform/TriggerArea" unique_id=1278685949]
+position = Vector2(0, 97)
+shape = SubResource("RectangleShape2D_a6qkt")
+
+[node name="Platforms26" parent="." unique_id=2058547368 instance=ExtResource("1_6b77o")]
+position = Vector2(-738, -601)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms39" parent="." unique_id=1173182365 instance=ExtResource("1_6b77o")]
+position = Vector2(-934, -714)
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms40" parent="." unique_id=1916388819 instance=ExtResource("1_6b77o")]
+position = Vector2(-793, -836)
+scale = Vector2(0.02, 0.02)
+
+[node name="Kill block" parent="." unique_id=899846819 instance=ExtResource("5_wr2op")]
+z_index = 1
+position = Vector2(2371, -558)
+scale = Vector2(37.956, 3.0433335)
+
+[node name="Label" type="Label" parent="." unique_id=1222987454]
+z_index = 1
+offset_left = 107.0
+offset_top = -615.0
+offset_right = 1667.0
+offset_bottom = -499.0
+text = "Don't worry the stakes arn't that high 
+                              lol"
+label_settings = SubResource("LabelSettings_a6qkt")
+
+[node name="enjoy!" type="Label" parent="." unique_id=1289480624]
+z_index = 1
+offset_left = 545.0
+offset_top = -1393.0
+offset_right = 1065.0
+offset_bottom = -1325.0
+text = "ENJOY!"
+label_settings = SubResource("LabelSettings_ck76l")
+
+[node name="Platforms41" parent="." unique_id=1295474503 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-1068, -1021)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms42" parent="." unique_id=2037059823 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-1068, -1214)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms43" parent="." unique_id=626211659 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-1039, -662)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms44" parent="." unique_id=2000223480 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-1039, -855)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms45" parent="." unique_id=1520812670 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-1068, -1375)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms46" parent="." unique_id=2135647787 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(-1068, -1568)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms47" parent="." unique_id=799753609 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(905, -1019)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms48" parent="." unique_id=1521340463 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(905, -1212)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Kill block3" parent="." unique_id=2001209088 instance=ExtResource("5_wr2op")]
+z_index = 1
+position = Vector2(359.00003, -1450)
+scale = Vector2(0.5990001, 1)
+
+[node name="Kill block4" parent="." unique_id=1494221315 instance=ExtResource("5_wr2op")]
+z_index = 1
+position = Vector2(-362, -927)
+
+[node name="Kill block5" parent="." unique_id=88470742 instance=ExtResource("5_wr2op")]
+z_index = 1
+position = Vector2(-540, -1457)
+
+[node name="Kill block6" parent="." unique_id=852994709 instance=ExtResource("5_wr2op")]
+z_index = 1
+position = Vector2(-31, -1418)
+
+[node name="Kill block7" parent="." unique_id=797326137 instance=ExtResource("5_wr2op")]
+z_index = 1
+position = Vector2(373, -1790)
+
+[node name="Kill block8" parent="." unique_id=1777898057 instance=ExtResource("5_wr2op")]
+z_index = 1
+position = Vector2(465, -2130)
+rotation = 1.5707964
+
+[node name="Portal_6" type="Area2D" parent="." unique_id=1038854209]
+script = ExtResource("8_7yij0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Portal_6" unique_id=1314941486]
+z_index = 1
+position = Vector2(913, -1523.0001)
+scale = Vector2(0.7265625, 0.6796875)
+texture = ExtResource("9_vs2i3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_6" unique_id=350643976]
+z_index = 1
+position = Vector2(912, -1524)
+shape = SubResource("RectangleShape2D_xc61n")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=983885378]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=26892507]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=2139615476]
+z_index = 1
+position = Vector2(75, -886)
+texture = ExtResource("10_wcr0j")
+
+[node name="Platforms49" parent="." unique_id=1336678943 instance=ExtResource("1_6b77o")]
+z_index = 1
+position = Vector2(880, -2132)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[connection signal="body_entered" from="HiddenPlatform/TriggerArea" to="HiddenPlatform" method="_on_trigger_area_body_entered"]
+[connection signal="body_entered" from="Portal_6" to="Portal_6" method="_on_body_entered"]

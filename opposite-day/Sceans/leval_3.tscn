@@ -1,0 +1,177 @@
+[gd_scene format=3 uid="uid://dy6pkp7yklgdj"]
+
+[ext_resource type="PackedScene" uid="uid://bra6xarc02te0" path="res://Sceans/character_body_2d.tscn" id="1_5uuox"]
+[ext_resource type="PackedScene" uid="uid://dbjryr0ut61rl" path="res://Sceans/platforms.tscn" id="2_efsgl"]
+[ext_resource type="PackedScene" uid="uid://bh7nnqjfjojtk" path="res://Sceans/kill_block.tscn" id="3_j2jdt"]
+[ext_resource type="FontFile" uid="uid://cbreb82wgeiss" path="res://Assets/Fonts/Picsue Sans Trial.otf" id="4_7vyw2"]
+[ext_resource type="FontFile" uid="uid://hp4p3coyoqmm" path="res://Assets/Fonts/The Bandit and the Lone Rider.ttf" id="5_nljn5"]
+[ext_resource type="Script" uid="uid://c54dovfo8atek" path="res://Scripts/portal_3.gd" id="6_vy4tj"]
+[ext_resource type="Texture2D" uid="uid://do0s7xplrma6q" path="res://Assets/other/icon.svg" id="7_0vaot"]
+[ext_resource type="Texture2D" uid="uid://bvf6e5xjln6ex" path="res://Assets/Platforms/untitled-pixel-art@4x.png" id="8_sc24x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g60ly"]
+font = ExtResource("4_7vyw2")
+font_size = 23
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_hkg1e"]
+font = ExtResource("5_nljn5")
+font_size = 59
+font_color = Color(0, 0, 0, 1)
+outline_size = 7
+outline_color = Color(0.74509805, 0.2, 0.1882353, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttyo5"]
+size = Vector2(63, 50)
+
+[node name="Leval3" type="Node2D" unique_id=739092571]
+texture_filter = 1
+position = Vector2(7, -135)
+
+[node name="Player" parent="." unique_id=1165395594 instance=ExtResource("1_5uuox")]
+texture_filter = 1
+position = Vector2(788, 85)
+
+[node name="Platforms" parent="." unique_id=88795311 instance=ExtResource("2_efsgl")]
+position = Vector2(764.99994, 219)
+scale = Vector2(0.09, 0.09)
+
+[node name="Kill block2" parent="." unique_id=899846819 instance=ExtResource("3_j2jdt")]
+position = Vector2(-501.99994, 197)
+scale = Vector2(2.3530002, 2.7025)
+
+[node name="Platforms2" parent="." unique_id=2107671717 instance=ExtResource("2_efsgl")]
+position = Vector2(61, 104.99999)
+scale = Vector2(0.09, 0.09)
+
+[node name="Platforms3" parent="." unique_id=396739084 instance=ExtResource("2_efsgl")]
+position = Vector2(493.99997, -167)
+scale = Vector2(0.09, 0.09)
+
+[node name="Platforms4" parent="." unique_id=1835173377 instance=ExtResource("2_efsgl")]
+position = Vector2(-255.99998, 9.000001)
+scale = Vector2(0.09, 0.09)
+
+[node name="Kill block5" parent="." unique_id=1600853618 instance=ExtResource("3_j2jdt")]
+position = Vector2(448, 155)
+scale = Vector2(0.9639999, 1)
+
+[node name="Platforms5" parent="." unique_id=1953228172 instance=ExtResource("2_efsgl")]
+position = Vector2(142, -118.00001)
+scale = Vector2(0.09, 0.09)
+
+[node name="Platforms6" parent="." unique_id=40608050 instance=ExtResource("2_efsgl")]
+position = Vector2(396, 177)
+scale = Vector2(0.09, 0.09)
+
+[node name="Kill block6" parent="." unique_id=504511918 instance=ExtResource("3_j2jdt")]
+position = Vector2(-552, -79.99999)
+scale = Vector2(0.927, 1.0133333)
+
+[node name="Platforms7" parent="." unique_id=286861953 instance=ExtResource("2_efsgl")]
+position = Vector2(1038, -235)
+scale = Vector2(0.245, 0.245)
+
+[node name="Platforms8" parent="." unique_id=766215008 instance=ExtResource("2_efsgl")]
+position = Vector2(-606, -55)
+scale = Vector2(0.09, 0.09)
+
+[node name="Platforms9" parent="." unique_id=1421348871 instance=ExtResource("2_efsgl")]
+position = Vector2(-940, -113)
+scale = Vector2(0.09, 0.09)
+
+[node name="Platforms10" parent="." unique_id=1719974468 instance=ExtResource("2_efsgl")]
+position = Vector2(-1206, -169)
+scale = Vector2(0.205, 0.205)
+
+[node name="Kill block" parent="." unique_id=1302440693 instance=ExtResource("3_j2jdt")]
+position = Vector2(7334.0005, 416.99997)
+scale = Vector2(119.646, 7.913333)
+
+[node name="Platforms11" parent="." unique_id=1565828380 instance=ExtResource("2_efsgl")]
+position = Vector2(-631.99994, 246)
+scale = Vector2(0.145, 0.145)
+
+[node name="Platforms12" parent="." unique_id=118703483 instance=ExtResource("2_efsgl")]
+position = Vector2(-632, 312)
+scale = Vector2(0.145, 0.145)
+
+[node name="Platforms13" parent="." unique_id=2068583955 instance=ExtResource("2_efsgl")]
+position = Vector2(-631.9999, 380)
+scale = Vector2(0.145, 0.145)
+
+[node name="Platforms14" parent="." unique_id=2090262598 instance=ExtResource("2_efsgl")]
+position = Vector2(-632, 447)
+scale = Vector2(0.145, 0.145)
+
+[node name="Platforms15" parent="." unique_id=109026210 instance=ExtResource("2_efsgl")]
+position = Vector2(-632, 504)
+scale = Vector2(0.145, 0.145)
+
+[node name="Platforms16" parent="." unique_id=1377045680 instance=ExtResource("2_efsgl")]
+position = Vector2(-1910, 248)
+scale = Vector2(0.735, 0.735)
+
+[node name="Kill block3" parent="." unique_id=179250338 instance=ExtResource("3_j2jdt")]
+position = Vector2(-1047, -80)
+scale = Vector2(0.25599998, 15.176666)
+
+[node name="Kill block4" parent="." unique_id=801611847 instance=ExtResource("3_j2jdt")]
+position = Vector2(908, -570)
+scale = Vector2(0.25599998, 15.176666)
+
+[node name="Kill block7" parent="." unique_id=1213517171 instance=ExtResource("3_j2jdt")]
+position = Vector2(310.99997, -225)
+scale = Vector2(0.256, 1)
+
+[node name="Label" type="Label" parent="." unique_id=883688947]
+offset_left = 414.0
+offset_top = 302.0
+offset_right = 633.0
+offset_bottom = 331.0
+text = "         Only three? 
+   you can do better :]"
+label_settings = SubResource("LabelSettings_g60ly")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="." unique_id=1079707240]
+offset_left = -387.0
+offset_top = -305.0
+offset_right = -84.0
+offset_bottom = -245.0
+text = "Choose your path"
+label_settings = SubResource("LabelSettings_hkg1e")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="." unique_id=1175296750]
+offset_left = 756.0
+offset_top = -401.0
+offset_right = 975.0
+offset_bottom = -340.0
+text = "wrong place"
+label_settings = SubResource("LabelSettings_g60ly")
+metadata/_edit_use_anchors_ = true
+
+[node name="Portal_3" type="Area2D" parent="." unique_id=303177885]
+script = ExtResource("6_vy4tj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Portal_3" unique_id=1229341036]
+position = Vector2(-1052, -198)
+scale = Vector2(0.49609393, 0.40625)
+texture = ExtResource("7_0vaot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_3" unique_id=851834678]
+position = Vector2(-1051, -198)
+shape = SubResource("RectangleShape2D_ttyo5")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=344586354]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=945934889]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(2000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1120923140]
+texture = ExtResource("8_sc24x")
+
+[connection signal="body_entered" from="Portal_3" to="Portal_3" method="_on_body_entered"]

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dtl3u2e6r8jgc"]
+
+[ext_resource type="Texture2D" uid="uid://c3qoa1f2b27uo" path="res://Assets/other/untitled-pixel-art@4x (1).png" id="1_auhl5"]
+
+[sub_resource type="Gradient" id="Gradient_auhl5"]
+offsets = PackedFloat32Array(0, 0.45061728, 0.7222222, 1)
+colors = PackedColorArray(0.5410766, 0.13947958, 0.16166532, 1, 0.7921569, 0.6431373, 0.70980394, 1, 1, 1, 1, 0.80030847, 1, 1, 1, 0.59607846)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_l816y"]
+gradient = SubResource("Gradient_auhl5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l816y"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 6.0
+spread = 35.0
+gravity = Vector3(-20, 0, 0)
+scale_min = 0.099999994
+scale_max = 0.099999994
+color_ramp = SubResource("GradientTexture1D_l816y")
+
+[node name="Dust" type="GPUParticles2D" unique_id=1871856328]
+scale = Vector2(1.0028819, 1)
+emitting = false
+amount = 24
+texture = ExtResource("1_auhl5")
+lifetime = 0.4
+randomness = 0.7
+process_material = SubResource("ParticleProcessMaterial_l816y")

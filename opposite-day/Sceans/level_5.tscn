@@ -1,0 +1,260 @@
+[gd_scene format=3 uid="uid://b7hge4tsyndfb"]
+
+[ext_resource type="PackedScene" uid="uid://bra6xarc02te0" path="res://Sceans/character_body_2d.tscn" id="1_hsjm5"]
+[ext_resource type="PackedScene" uid="uid://dbjryr0ut61rl" path="res://Sceans/platforms.tscn" id="2_7dcep"]
+[ext_resource type="PackedScene" uid="uid://bh7nnqjfjojtk" path="res://Sceans/kill_block.tscn" id="3_ruigh"]
+[ext_resource type="FontFile" uid="uid://cbreb82wgeiss" path="res://Assets/Fonts/Picsue Sans Trial.otf" id="4_eksap"]
+[ext_resource type="FontFile" uid="uid://hp4p3coyoqmm" path="res://Assets/Fonts/The Bandit and the Lone Rider.ttf" id="5_8lymd"]
+[ext_resource type="Script" uid="uid://fd552cjb8u6o" path="res://Scripts/portal_5.gd" id="6_l83iu"]
+[ext_resource type="Texture2D" uid="uid://do0s7xplrma6q" path="res://Assets/other/icon.svg" id="7_rvtnl"]
+[ext_resource type="Texture2D" uid="uid://bvf6e5xjln6ex" path="res://Assets/Platforms/untitled-pixel-art@4x.png" id="8_11bx7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wlvjs"]
+font = ExtResource("4_eksap")
+font_size = 60
+font_color = Color(0, 0, 0, 1)
+outline_size = 8
+outline_color = Color(0.74509805, 0.2, 0.1882353, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8hcwt"]
+font = ExtResource("5_8lymd")
+font_size = 73
+font_color = Color(0, 0, 0, 1)
+outline_size = 7
+outline_color = Color(0.74509805, 0.2, 0.1882353, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_s6ji0"]
+font = ExtResource("4_eksap")
+font_size = 36
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hcwt"]
+size = Vector2(102, 97)
+
+[node name="level_5" type="Node2D" unique_id=1472560464]
+
+[node name="Player" parent="." unique_id=1165395594 instance=ExtResource("1_hsjm5")]
+position = Vector2(690, -1451)
+
+[node name="Platforms" parent="." unique_id=336532263 instance=ExtResource("2_7dcep")]
+z_index = 1
+position = Vector2(810, -1352)
+scale = Vector2(0.11, 0.11)
+
+[node name="Platforms2" parent="." unique_id=1437022660 instance=ExtResource("2_7dcep")]
+z_index = 1
+position = Vector2(593, -1352)
+scale = Vector2(0.11, 0.11)
+
+[node name="Kill block" parent="." unique_id=899846819 instance=ExtResource("3_ruigh")]
+z_index = 1
+position = Vector2(-86.99997, -1376)
+scale = Vector2(1.176, 1)
+
+[node name="Platforms3" parent="." unique_id=831561465 instance=ExtResource("2_7dcep")]
+z_index = 1
+position = Vector2(69, -1352)
+scale = Vector2(0.11, 0.11)
+
+[node name="Platforms4" parent="." unique_id=61917418 instance=ExtResource("2_7dcep")]
+z_index = 1
+position = Vector2(-218.99998, -1352)
+scale = Vector2(0.11, 0.11)
+
+[node name="Platforms5" parent="." unique_id=1193179080 instance=ExtResource("2_7dcep")]
+z_index = 1
+position = Vector2(-507, -1352)
+scale = Vector2(0.11, 0.11)
+
+[node name="Platforms6" parent="." unique_id=1522040876 instance=ExtResource("2_7dcep")]
+z_index = 1
+position = Vector2(-795, -1352)
+scale = Vector2(0.11, 0.11)
+
+[node name="Platforms7" parent="." unique_id=550688312 instance=ExtResource("2_7dcep")]
+z_index = 1
+position = Vector2(-885, -1402.9999)
+scale = Vector2(0.11, 0.11)
+
+[node name="Kill block2" parent="." unique_id=1290069901 instance=ExtResource("3_ruigh")]
+z_index = 1
+position = Vector2(-465, -1375)
+
+[node name="Kill block3" parent="." unique_id=1271782844 instance=ExtResource("3_ruigh")]
+position = Vector2(-999.00006, -1793.5)
+scale = Vector2(0.3080001, 17.130001)
+
+[node name="Platforms8" parent="." unique_id=191536461 instance=ExtResource("2_7dcep")]
+position = Vector2(487.00003, -992)
+rotation = 1.5707964
+scale = Vector2(0.075, 0.075)
+
+[node name="Platforms9" parent="." unique_id=1644171772 instance=ExtResource("2_7dcep")]
+position = Vector2(270, -1093)
+rotation = 1.5707964
+scale = Vector2(0.075, 0.075)
+
+[node name="Platforms10" parent="." unique_id=671572586 instance=ExtResource("2_7dcep")]
+position = Vector2(270, -899)
+rotation = 1.5707964
+scale = Vector2(0.075, 0.075)
+
+[node name="Kill block4" parent="." unique_id=951816188 instance=ExtResource("3_ruigh")]
+position = Vector2(601, -635)
+scale = Vector2(3.8566873, 1.2866666)
+
+[node name="Platforms11" parent="." unique_id=88795311 instance=ExtResource("2_7dcep")]
+position = Vector2(270, -703)
+rotation = 1.5707964
+scale = Vector2(0.075, 0.075)
+
+[node name="Platforms12" parent="." unique_id=854573363 instance=ExtResource("2_7dcep")]
+position = Vector2(487, -797)
+rotation = 1.5707964
+scale = Vector2(0.075, 0.075)
+
+[node name="Platforms13" parent="." unique_id=527485242 instance=ExtResource("2_7dcep")]
+position = Vector2(487, -703)
+rotation = 1.5707964
+scale = Vector2(0.075, 0.075)
+
+[node name="Platforms14" parent="." unique_id=2016207492 instance=ExtResource("2_7dcep")]
+position = Vector2(866, -1141.0001)
+rotation = 1.5707964
+scale = Vector2(0.075, 0.075)
+
+[node name="Platforms15" parent="." unique_id=913632279 instance=ExtResource("2_7dcep")]
+position = Vector2(866, -1015)
+rotation = 1.5707964
+scale = Vector2(0.075, 0.075)
+
+[node name="Platforms16" parent="." unique_id=599734519 instance=ExtResource("2_7dcep")]
+position = Vector2(866, -818)
+rotation = 1.5707964
+scale = Vector2(0.075, 0.075)
+
+[node name="Platforms17" parent="." unique_id=622007370 instance=ExtResource("2_7dcep")]
+position = Vector2(866, -622)
+rotation = 1.5707964
+scale = Vector2(0.075, 0.075)
+
+[node name="Kill block6" parent="." unique_id=1660813653 instance=ExtResource("3_ruigh")]
+position = Vector2(-329, -512)
+scale = Vector2(2.93, 1)
+
+[node name="Platforms18" parent="." unique_id=1136452328 instance=ExtResource("2_7dcep")]
+position = Vector2(866, -428)
+rotation = 1.5707964
+scale = Vector2(0.075, 0.075)
+
+[node name="Platforms19" parent="." unique_id=317503519 instance=ExtResource("2_7dcep")]
+position = Vector2(866, -231)
+rotation = 1.5707964
+scale = Vector2(0.075, 0.075)
+
+[node name="Platforms20" parent="." unique_id=1595107937 instance=ExtResource("2_7dcep")]
+position = Vector2(694, -530)
+scale = Vector2(0.11, 0.11)
+
+[node name="Platforms21" parent="." unique_id=1364709343 instance=ExtResource("2_7dcep")]
+position = Vector2(339, -459.99997)
+scale = Vector2(0.11, 0.11)
+
+[node name="Kill block5" parent="." unique_id=1376466283 instance=ExtResource("3_ruigh")]
+position = Vector2(624, -503.74997)
+scale = Vector2(1.534, 1.8616667)
+
+[node name="Platforms22" parent="." unique_id=1690741958 instance=ExtResource("2_7dcep")]
+position = Vector2(63, -460)
+scale = Vector2(0.11, 0.11)
+
+[node name="Platforms23" parent="." unique_id=189390929 instance=ExtResource("2_7dcep")]
+position = Vector2(-286, -532)
+scale = Vector2(0.11, 0.11)
+
+[node name="Platforms24" parent="." unique_id=894831175 instance=ExtResource("2_7dcep")]
+position = Vector2(-733, -503)
+scale = Vector2(0.11, 0.11)
+
+[node name="Platforms25" parent="." unique_id=778331683 instance=ExtResource("2_7dcep")]
+position = Vector2(-1098, -603)
+scale = Vector2(0.11, 0.11)
+
+[node name="Platforms27" parent="." unique_id=786124746 instance=ExtResource("2_7dcep")]
+position = Vector2(-537, -991)
+rotation = 1.5707964
+scale = Vector2(0.075, 0.075)
+
+[node name="Platforms28" parent="." unique_id=629252012 instance=ExtResource("2_7dcep")]
+position = Vector2(-537, -795)
+rotation = 1.5707964
+scale = Vector2(0.075, 0.075)
+
+[node name="Label" type="Label" parent="." unique_id=813586379]
+offset_left = 307.0
+offset_top = -1234.0
+offset_right = 489.0
+offset_bottom = -1059.0
+text = "Go
+Left :)
+-->"
+label_settings = SubResource("LabelSettings_wlvjs")
+
+[node name="Label2" type="Label" parent="." unique_id=75199543]
+z_index = 1
+offset_left = 86.0
+offset_top = -1682.0
+offset_right = 359.0
+offset_bottom = -1608.0
+text = "Did you see?"
+label_settings = SubResource("LabelSettings_8hcwt")
+
+[node name="Platforms30" parent="." unique_id=298890775 instance=ExtResource("2_7dcep")]
+position = Vector2(-143, -152)
+scale = Vector2(0.11, 0.11)
+
+[node name="Label3" type="Label" parent="." unique_id=1715910044]
+offset_left = -166.0
+offset_top = -234.0
+offset_right = 102.0
+offset_bottom = -189.0
+text = "Whoa secret ^_~"
+label_settings = SubResource("LabelSettings_s6ji0")
+
+[node name="Platforms26" parent="." unique_id=944580053 instance=ExtResource("2_7dcep")]
+position = Vector2(446, -930)
+scale = Vector2(0.02, 0.02)
+
+[node name="Kill block7" parent="." unique_id=1997737223 instance=ExtResource("3_ruigh")]
+position = Vector2(925, -1740.0001)
+scale = Vector2(0.3080001, 17.130001)
+
+[node name="Portal_5" type="Area2D" parent="." unique_id=74895452]
+script = ExtResource("6_l83iu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Portal_5" unique_id=293072923]
+position = Vector2(-1093, -654)
+scale = Vector2(0.80078137, 0.78906244)
+texture = ExtResource("7_rvtnl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_5" unique_id=1399567395]
+position = Vector2(-1092, -654)
+shape = SubResource("RectangleShape2D_8hcwt")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=453030483]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1773409179]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=680620058]
+texture_filter = 1
+position = Vector2(122, -692)
+texture = ExtResource("8_11bx7")
+
+[node name="Platforms29" parent="." unique_id=584827643 instance=ExtResource("2_7dcep")]
+position = Vector2(276, -1013)
+scale = Vector2(0.02, 0.02)
+
+[connection signal="body_entered" from="Portal_5" to="Portal_5" method="_on_body_entered"]

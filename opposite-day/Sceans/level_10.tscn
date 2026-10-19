@@ -1,0 +1,1239 @@
+[gd_scene format=3 uid="uid://ixiogkpuylrn"]
+
+[ext_resource type="Script" uid="uid://bbu08oxqleyaa" path="res://Scripts/level_10.gd" id="1_x0xay"]
+[ext_resource type="Texture2D" uid="uid://jnxjn0tpyps4" path="res://Assets/Platforms/pixil-frame-0 (4).png" id="2_svuym"]
+[ext_resource type="PackedScene" uid="uid://dbjryr0ut61rl" path="res://Sceans/platforms.tscn" id="3_swytx"]
+[ext_resource type="PackedScene" uid="uid://bra6xarc02te0" path="res://Sceans/character_body_2d.tscn" id="4_reqlu"]
+[ext_resource type="FontFile" uid="uid://hp4p3coyoqmm" path="res://Assets/Fonts/The Bandit and the Lone Rider.ttf" id="5_piitg"]
+[ext_resource type="FontFile" uid="uid://cbreb82wgeiss" path="res://Assets/Fonts/Picsue Sans Trial.otf" id="6_bvlp5"]
+[ext_resource type="Script" uid="uid://bobjbph34bxk" path="res://Scripts/Confettie.gd" id="7_db54e"]
+[ext_resource type="FontFile" uid="uid://cmpcmj5umhdot" path="res://Assets/Fonts/Ivegotrabies-Regular.ttf" id="8_kuvi4"]
+[ext_resource type="Texture2D" uid="uid://xwef24dm0vm" path="res://Assets/Platforms/pixil-frame-0.png" id="9_gao26"]
+[ext_resource type="Texture2D" uid="uid://bw6cn240ymhpk" path="res://Assets/other/untitled-pixel-art@2x.png" id="10_5pvkg"]
+[ext_resource type="PackedScene" uid="uid://bh7nnqjfjojtk" path="res://Sceans/kill_block.tscn" id="11_cgfo6"]
+[ext_resource type="PackedScene" uid="uid://bodwwen4rkrbg" path="res://Sceans/moving_kill_b.tscn" id="12_5sf7w"]
+[ext_resource type="Texture2D" uid="uid://bvf6e5xjln6ex" path="res://Assets/Platforms/untitled-pixel-art@4x.png" id="13_n2ce6"]
+[ext_resource type="AudioStream" uid="uid://chpaif6komlf7" path="res://Assets/Sounds/confettie.mp3" id="14_r0rmr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ev4w3"]
+font = ExtResource("5_piitg")
+font_size = 60
+font_color = Color(0, 0, 0, 1)
+outline_size = 7
+outline_color = Color(0.74509805, 0.2, 0.1882353, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dge5c"]
+font = ExtResource("6_bvlp5")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_yke01"]
+font = ExtResource("6_bvlp5")
+font_size = 44
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wv1nn"]
+size = Vector2(420, 396)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wv1nn"]
+font = ExtResource("6_bvlp5")
+font_size = 28
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+outline_color = Color(0.24798349, 0.79734373, 0.45175666, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i5vfu"]
+font = ExtResource("8_kuvi4")
+font_size = 31
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_80drp"]
+font = ExtResource("8_kuvi4")
+font_size = 31
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+outline_color = Color(0.69411767, 0, 0.16862746, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lcw1n"]
+font = ExtResource("8_kuvi4")
+font_size = 31
+font_color = Color(0.82478106, 0.68838906, 0.1429677, 1)
+outline_size = 4
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_i5vfu"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 75.0
+initial_velocity_min = 350.0
+initial_velocity_max = 500.0
+gravity = Vector3(0, 400, 0)
+scale_min = 4.0
+scale_max = 8.0
+color = Color(1, 0, 0, 1)
+hue_variation_min = -0.5
+hue_variation_max = 0.49999997
+
+[sub_resource type="LabelSettings" id="LabelSettings_1q5ot"]
+font = ExtResource("6_bvlp5")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_6jqg4"]
+font = ExtResource("6_bvlp5")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_bm7nh"]
+font = ExtResource("6_bvlp5")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_6dme1"]
+font = ExtResource("6_bvlp5")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_8lbo1"]
+font = ExtResource("6_bvlp5")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[node name="level_10" type="Node2D" unique_id=1172593134]
+position = Vector2(-25, 8)
+script = ExtResource("1_x0xay")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=175361385]
+texture_filter = 1
+position = Vector2(8412.499, 423.00003)
+scale = Vector2(10.265995, 7.245)
+texture = ExtResource("2_svuym")
+
+[node name="PixilFrame0(4)" type="Sprite2D" parent="Background" unique_id=149880479]
+position = Vector2(-264.3191, -103.6577)
+scale = Vector2(0.097408965, 0.029905682)
+texture = ExtResource("2_svuym")
+
+[node name="PixilFrame0(4)2" type="Sprite2D" parent="Background" unique_id=841194046]
+position = Vector2(-251.2663, -96.06625)
+scale = Vector2(0.097408965, 0.029905682)
+texture = ExtResource("2_svuym")
+
+[node name="PixilFrame0(4)3" type="Sprite2D" parent="Background" unique_id=1373515492]
+position = Vector2(-251.2663, -38.371296)
+scale = Vector2(0.097408965, 0.029905682)
+texture = ExtResource("2_svuym")
+
+[node name="PixilFrame0(4)4" type="Sprite2D" parent="Background" unique_id=2056567700]
+position = Vector2(-282.04755, -64.87233)
+scale = Vector2(0.097408965, 0.029905682)
+texture = ExtResource("2_svuym")
+
+[node name="PixilFrame0(4)5" type="Sprite2D" parent="Background" unique_id=1949722927]
+position = Vector2(-333.28467, -90.40718)
+scale = Vector2(0.097408965, 0.029905682)
+texture = ExtResource("2_svuym")
+
+[node name="PixilFrame0(4)6" type="Sprite2D" parent="Background" unique_id=1509982047]
+position = Vector2(-251.2663, -76.46654)
+scale = Vector2(0.097408965, 0.029905682)
+texture = ExtResource("2_svuym")
+
+[node name="PixilFrame0(4)7" type="Sprite2D" parent="Background" unique_id=2019884606]
+position = Vector2(-232.36896, -126.017944)
+scale = Vector2(0.097408965, 0.029905682)
+texture = ExtResource("2_svuym")
+
+[node name="PixilFrame0(4)8" type="Sprite2D" parent="Background" unique_id=236369697]
+position = Vector2(-235.29126, -60.317463)
+scale = Vector2(0.097408965, 0.029905682)
+texture = ExtResource("2_svuym")
+
+[node name="Platforms" parent="." unique_id=88795311 instance=ExtResource("3_swytx")]
+position = Vector2(19, 293)
+
+[node name="Player" parent="." unique_id=1165395594 instance=ExtResource("4_reqlu")]
+position = Vector2(-851, 108)
+
+[node name="Platforms2" parent="." unique_id=1351835717 instance=ExtResource("3_swytx")]
+position = Vector2(2163, 293)
+
+[node name="Label" type="Label" parent="." unique_id=1128139158]
+offset_left = -789.0
+offset_top = -120.0
+offset_right = -512.0
+offset_bottom = -59.0
+text = "The Last Level!"
+label_settings = SubResource("LabelSettings_ev4w3")
+
+[node name="Label2" type="Label" parent="." unique_id=1614686678]
+offset_left = -119.0
+offset_top = 28.0
+offset_right = 171.0
+offset_bottom = 65.0
+text = "You've come so far 🥹"
+label_settings = SubResource("LabelSettings_dge5c")
+
+[node name="Label3" type="Label" parent="." unique_id=76107075]
+offset_left = 337.0
+offset_top = 48.0
+offset_right = 527.0
+offset_bottom = 103.0
+text = "Great Job "
+label_settings = SubResource("LabelSettings_yke01")
+
+[node name="score" type="Area2D" parent="." unique_id=1257547023]
+script = ExtResource("7_db54e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="score" unique_id=1368893344]
+position = Vector2(837, 80)
+shape = SubResource("RectangleShape2D_wv1nn")
+
+[node name="Scors" type="Label" parent="score" unique_id=628175893]
+offset_left = 819.0
+offset_top = -113.0
+offset_right = 1036.0
+offset_bottom = -78.0
+text = "Heres your score: "
+label_settings = SubResource("LabelSettings_wv1nn")
+
+[node name="Time" type="Label" parent="score/Scors" unique_id=794513418]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.068
+anchor_top = -0.186
+anchor_right = -0.068
+anchor_bottom = -0.186
+offset_left = 57.50606
+offset_top = 88.26
+offset_right = 192.50606
+offset_bottom = 127.26
+text = "Time: 0000"
+label_settings = SubResource("LabelSettings_i5vfu")
+
+[node name="deaths" type="Label" parent="score/Scors" unique_id=1133740266]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 115.0
+offset_right = 190.0
+offset_bottom = 154.0
+text = "Deaths: 0000"
+label_settings = SubResource("LabelSettings_80drp")
+
+[node name="Best time" type="Label" parent="score/Scors" unique_id=333269549]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 197.0
+offset_right = 213.0
+offset_bottom = 236.0
+text = "Best Time: 0000"
+label_settings = SubResource("LabelSettings_lcw1n")
+
+[node name="Score frame" type="Sprite2D" parent="score/Scors" unique_id=396180732]
+texture_filter = 1
+position = Vector2(106.25009, 254.75)
+scale = Vector2(0.4016666, 0.02875)
+texture = ExtResource("9_gao26")
+metadata/_edit_group_ = true
+
+[node name="PixilFrame1" type="Sprite2D" parent="score/Scors" unique_id=382950369]
+texture_filter = 1
+position = Vector2(226.75006, 159.61032)
+rotation = 1.5707964
+scale = Vector2(0.33618206, 0.02875)
+texture = ExtResource("9_gao26")
+metadata/_edit_group_ = true
+
+[node name="PixilFrame3" type="Sprite2D" parent="score/Scors" unique_id=516609075]
+texture_filter = 1
+position = Vector2(-9.25, 159.6211)
+rotation = 1.5707964
+scale = Vector2(0.3362661, 0.02875)
+texture = ExtResource("9_gao26")
+metadata/_edit_group_ = true
+
+[node name="PixilFrame2" type="Sprite2D" parent="score/Scors" unique_id=1032500572]
+texture_filter = 1
+position = Vector2(105.75009, 58.749992)
+scale = Vector2(0.4016666, 0.02875)
+texture = ExtResource("9_gao26")
+metadata/_edit_group_ = true
+
+[node name="UntitledPixelArt_2x" type="Sprite2D" parent="score/Scors" unique_id=890094625]
+texture_filter = 1
+position = Vector2(103, 178)
+scale = Vector2(0.26250002, 0.24299997)
+texture = ExtResource("10_5pvkg")
+metadata/_edit_group_ = true
+
+[node name="confettie" type="GPUParticles2D" parent="score" unique_id=148898843]
+position = Vector2(924, -65)
+emitting = false
+amount = 50
+lifetime = 5.4799999999999995
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_i5vfu")
+
+[node name="confettie2" type="GPUParticles2D" parent="score" unique_id=1598555796]
+position = Vector2(792, 24)
+emitting = false
+amount = 50
+lifetime = 5.4799999999999995
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_i5vfu")
+
+[node name="confettie3" type="GPUParticles2D" parent="score" unique_id=1506774772]
+position = Vector2(922, 53)
+emitting = false
+amount = 50
+lifetime = 5.4799999999999995
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_i5vfu")
+
+[node name="confettie4" type="GPUParticles2D" parent="score" unique_id=1701623844]
+position = Vector2(1074, 67)
+emitting = false
+amount = 50
+lifetime = 5.4799999999999995
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_i5vfu")
+
+[node name="Label4" type="Label" parent="." unique_id=350332322]
+offset_left = 1271.0
+offset_top = 65.0
+offset_right = 1531.0
+offset_bottom = 99.0
+text = "Thats some good stats"
+label_settings = SubResource("LabelSettings_1q5ot")
+
+[node name="Label5" type="Label" parent="." unique_id=1518723318]
+offset_left = 1588.0
+offset_top = 115.0
+offset_right = 1952.0
+offset_bottom = 155.0
+text = "Surly you could do better?"
+label_settings = SubResource("LabelSettings_6jqg4")
+
+[node name="Label6" type="Label" parent="." unique_id=1850711135]
+offset_left = 2048.0
+offset_top = 79.0
+offset_right = 2609.0
+offset_bottom = 114.0
+text = "Go back and show what your really made of😎"
+label_settings = SubResource("LabelSettings_bm7nh")
+
+[node name="Kill block" parent="." unique_id=899846819 instance=ExtResource("11_cgfo6")]
+position = Vector2(2439.0002, 235.99998)
+scale = Vector2(1.03, 1.7133334)
+
+[node name="Label7" type="Label" parent="." unique_id=1231903871]
+offset_left = 3307.0
+offset_top = 133.0
+offset_right = 3570.0
+offset_bottom = 206.0
+text = "Theres really nothing 
+             to see"
+label_settings = SubResource("LabelSettings_6dme1")
+
+[node name="Platforms3" parent="." unique_id=830274939 instance=ExtResource("3_swytx")]
+position = Vector2(4530, 293)
+
+[node name="Label8" type="Label" parent="." unique_id=139173422]
+offset_left = 4145.0
+offset_top = 83.0
+offset_right = 4408.0
+offset_bottom = 122.0
+text = "Curious are we?"
+label_settings = SubResource("LabelSettings_6dme1")
+
+[node name="Label9" type="Label" parent="." unique_id=1110361557]
+offset_left = 4297.0
+offset_top = 135.0
+offset_right = 4626.0
+offset_bottom = 174.0
+text = "Love this game that much huh?"
+label_settings = SubResource("LabelSettings_6dme1")
+
+[node name="Label10" type="Label" parent="." unique_id=1056292706]
+offset_left = 5041.0
+offset_top = 100.0
+offset_right = 5370.0
+offset_bottom = 165.0
+text = "here just go to the start 
+               (Trust me)"
+label_settings = SubResource("LabelSettings_6dme1")
+
+[node name="Kill block2" parent="." unique_id=84734864 instance=ExtResource("11_cgfo6")]
+position = Vector2(5399, 220)
+scale = Vector2(1.1650003, 2.3899999)
+
+[node name="Platforms4" parent="." unique_id=582610091 instance=ExtResource("3_swytx")]
+position = Vector2(6787, 293)
+
+[node name="Kill block3" parent="." unique_id=1052055095 instance=ExtResource("11_cgfo6")]
+position = Vector2(5785, 213)
+scale = Vector2(1.3664999, 2.8066669)
+
+[node name="Label11" type="Label" parent="." unique_id=519969199]
+offset_left = 5517.0
+offset_top = 82.0
+offset_right = 5846.0
+offset_bottom = 147.0
+text = "Come on its not that harddd"
+label_settings = SubResource("LabelSettings_6dme1")
+
+[node name="Label12" type="Label" parent="." unique_id=1254112325]
+offset_left = 6176.0
+offset_top = 145.0
+offset_right = 6505.0
+offset_bottom = 210.0
+text = "You really should go back"
+label_settings = SubResource("LabelSettings_6dme1")
+
+[node name="glithch" type="Sprite2D" parent="." unique_id=700345674]
+position = Vector2(6425.5, -79)
+scale = Vector2(0.18166667, 0.1125)
+texture = ExtResource("9_gao26")
+metadata/_edit_group_ = true
+
+[node name="PixilFrame10" type="Sprite2D" parent="glithch" unique_id=2007704431]
+position = Vector2(170.64453, -124.4444)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame11" type="Sprite2D" parent="glithch" unique_id=1698050055]
+position = Vector2(911.0078, 653.3333)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame12" type="Sprite2D" parent="glithch" unique_id=397100544]
+position = Vector2(484.40625, 1146.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame13" type="Sprite2D" parent="glithch" unique_id=957598804]
+position = Vector2(2207.336, -942.22235)
+scale = Vector2(0.7431228, 10.111112)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame14" type="Sprite2D" parent="glithch" unique_id=1640952970]
+position = Vector2(1835.7773, -1631.1113)
+scale = Vector2(0.7431228, 10.111112)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame15" type="Sprite2D" parent="glithch" unique_id=726512791]
+position = Vector2(1513.7617, 933.3334)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame16" type="Sprite2D" parent="glithch" unique_id=1971203542]
+position = Vector2(1015.59375, -786.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame17" type="Sprite2D" parent="glithch" unique_id=1360957303]
+position = Vector2(1186.2383, -911.11115)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame18" type="Sprite2D" parent="glithch" unique_id=1342812709]
+position = Vector2(2578.8984, 1866.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame19" type="Sprite2D" parent="glithch" unique_id=1466315308]
+position = Vector2(2749.543, 1742.2224)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame20" type="Sprite2D" parent="glithch" unique_id=188843202]
+position = Vector2(3489.9063, 2520)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame21" type="Sprite2D" parent="glithch" unique_id=1500014963]
+position = Vector2(3063.3047, 3013.3335)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame22" type="Sprite2D" parent="glithch" unique_id=208110267]
+position = Vector2(4092.6602, 2800)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame23" type="Sprite2D" parent="glithch" unique_id=1868848373]
+position = Vector2(3594.4922, 1080)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame24" type="Sprite2D" parent="glithch" unique_id=719938633]
+position = Vector2(3765.1367, 955.55554)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame25" type="Sprite2D" parent="glithch" unique_id=1694160341]
+position = Vector2(1772.4766, 426.66666)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame26" type="Sprite2D" parent="glithch" unique_id=2071239434]
+position = Vector2(1943.1211, 302.2223)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame27" type="Sprite2D" parent="glithch" unique_id=1843319846]
+position = Vector2(2683.4844, 1080)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame28" type="Sprite2D" parent="glithch" unique_id=390601883]
+position = Vector2(2256.8828, 1573.3334)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame29" type="Sprite2D" parent="glithch" unique_id=1993604219]
+position = Vector2(3286.2383, 1360)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame30" type="Sprite2D" parent="glithch" unique_id=2060423442]
+position = Vector2(2788.0703, -360.00006)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame31" type="Sprite2D" parent="glithch" unique_id=142348770]
+position = Vector2(2958.7148, -484.44452)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame32" type="Sprite2D" parent="glithch" unique_id=684116915]
+position = Vector2(2578.8984, 1866.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame33" type="Sprite2D" parent="glithch" unique_id=187502435]
+position = Vector2(2749.543, 1742.2224)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame34" type="Sprite2D" parent="glithch" unique_id=548514996]
+position = Vector2(3489.9063, 2520)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame35" type="Sprite2D" parent="glithch" unique_id=2114133956]
+position = Vector2(3063.3047, 3013.3335)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame36" type="Sprite2D" parent="glithch" unique_id=659721363]
+position = Vector2(4092.6602, 2800)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame37" type="Sprite2D" parent="glithch" unique_id=293464272]
+position = Vector2(3594.4922, 1080)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame38" type="Sprite2D" parent="glithch" unique_id=44833494]
+position = Vector2(3765.1367, 955.55554)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame39" type="Sprite2D" parent="glithch" unique_id=1501151504]
+position = Vector2(1772.4766, 426.66666)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame40" type="Sprite2D" parent="glithch" unique_id=1232319707]
+position = Vector2(1943.1211, 302.2223)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame41" type="Sprite2D" parent="glithch" unique_id=720301302]
+position = Vector2(2683.4844, 1080)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame42" type="Sprite2D" parent="glithch" unique_id=427138644]
+position = Vector2(2256.8828, 1573.3334)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame43" type="Sprite2D" parent="glithch" unique_id=1491201883]
+position = Vector2(3286.2383, 1360)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame44" type="Sprite2D" parent="glithch" unique_id=332137319]
+position = Vector2(2788.0703, -360.00006)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame45" type="Sprite2D" parent="glithch" unique_id=1295875980]
+position = Vector2(2958.7148, -484.44452)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame46" type="Sprite2D" parent="glithch" unique_id=376052489]
+position = Vector2(3503.668, 284.44443)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame47" type="Sprite2D" parent="glithch" unique_id=1322179638]
+position = Vector2(3674.3125, 160.00006)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame48" type="Sprite2D" parent="glithch" unique_id=603946232]
+position = Vector2(4414.676, 937.77783)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame49" type="Sprite2D" parent="glithch" unique_id=788911181]
+position = Vector2(3988.0742, 1431.1111)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame50" type="Sprite2D" parent="glithch" unique_id=402118325]
+position = Vector2(4519.2656, -502.22223)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame51" type="Sprite2D" parent="glithch" unique_id=1771481707]
+position = Vector2(4689.91, -626.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame52" type="Sprite2D" parent="glithch" unique_id=1071935175]
+position = Vector2(2697.246, -1155.5557)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame53" type="Sprite2D" parent="glithch" unique_id=1624718140]
+position = Vector2(2867.8906, -1280)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame54" type="Sprite2D" parent="glithch" unique_id=1320815502]
+position = Vector2(3608.254, -502.22223)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame55" type="Sprite2D" parent="glithch" unique_id=532641557]
+position = Vector2(3181.6523, -8.888916)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame56" type="Sprite2D" parent="glithch" unique_id=161405504]
+position = Vector2(4211.0117, -222.22223)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame57" type="Sprite2D" parent="glithch" unique_id=1500603734]
+position = Vector2(3712.8438, -1942.2224)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame58" type="Sprite2D" parent="glithch" unique_id=1687445720]
+position = Vector2(3883.4883, -2066.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame60" type="Sprite2D" parent="glithch" unique_id=2081789687]
+position = Vector2(4640.367, -853.33344)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame62" type="Sprite2D" parent="glithch" unique_id=1186438685]
+position = Vector2(4640.367, -853.33344)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame59" type="Sprite2D" parent="glithch" unique_id=956457479]
+position = Vector2(5122.0156, 577.77783)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame61" type="Sprite2D" parent="glithch" unique_id=1642037535]
+position = Vector2(6107.336, 2622.2224)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame63" type="Sprite2D" parent="glithch" unique_id=764833158]
+position = Vector2(4629.3555, 408.8889)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame64" type="Sprite2D" parent="glithch" unique_id=586068401]
+position = Vector2(5160.547, -1524.4446)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame65" type="Sprite2D" parent="glithch" unique_id=2047802101]
+position = Vector2(5331.1914, -1648.8892)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame66" type="Sprite2D" parent="glithch" unique_id=1886749272]
+position = Vector2(7634.8594, 1782.2222)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame67" type="Sprite2D" parent="glithch" unique_id=1411483928]
+position = Vector2(8237.613, 2062.2224)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame68" type="Sprite2D" parent="glithch" unique_id=1887547011]
+position = Vector2(7431.1914, 622.2222)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame69" type="Sprite2D" parent="glithch" unique_id=1147274684]
+position = Vector2(7103.668, -1222.2224)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame70" type="Sprite2D" parent="glithch" unique_id=1786056336]
+position = Vector2(7648.621, -453.33344)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame71" type="Sprite2D" parent="glithch" unique_id=1815439026]
+position = Vector2(7819.2656, -577.7778)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame72" type="Sprite2D" parent="glithch" unique_id=958870894]
+position = Vector2(7857.793, -2680.0002)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame73" type="Sprite2D" parent="glithch" unique_id=735473982]
+position = Vector2(6305.504, -400.00018)
+scale = Vector2(2.7752333, 1.6777782)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame74" type="Sprite2D" parent="glithch" unique_id=1287256648]
+position = Vector2(6454.129, -648.889)
+scale = Vector2(2.7752333, 1.6777782)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame75" type="Sprite2D" parent="glithch" unique_id=1581204732]
+position = Vector2(5488.0703, 1191.1111)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame76" type="Sprite2D" parent="glithch" unique_id=1396337128]
+position = Vector2(5658.715, 1066.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame77" type="Sprite2D" parent="glithch" unique_id=2026490145]
+position = Vector2(6399.082, 1844.4446)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame78" type="Sprite2D" parent="glithch" unique_id=1414001786]
+position = Vector2(5501.832, 2204.4446)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame79" type="Sprite2D" parent="glithch" unique_id=1493363560]
+position = Vector2(7001.836, 2124.4446)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame80" type="Sprite2D" parent="glithch" unique_id=2108585625]
+position = Vector2(7260.547, 1617.7778)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame81" type="Sprite2D" parent="glithch" unique_id=1363613105]
+position = Vector2(8171.5586, 2271.111)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame82" type="Sprite2D" parent="glithch" unique_id=961106609]
+position = Vector2(7744.957, 2764.4446)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame83" type="Sprite2D" parent="glithch" unique_id=648081285]
+position = Vector2(8276.145, 831.1111)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame84" type="Sprite2D" parent="glithch" unique_id=2006227319]
+position = Vector2(8446.789, 706.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame85" type="Sprite2D" parent="glithch" unique_id=241137348]
+position = Vector2(7967.8906, 1111.1111)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame86" type="Sprite2D" parent="glithch" unique_id=1898224367]
+position = Vector2(8669.727, 1182.2223)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame0" type="Sprite2D" parent="glithch" unique_id=539990385]
+position = Vector2(806.4219, 1440)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame1" type="Sprite2D" parent="glithch" unique_id=1746077872]
+position = Vector2(977.0664, 1315.5557)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame2" type="Sprite2D" parent="glithch" unique_id=44460010]
+position = Vector2(1717.4297, 2093.3335)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame3" type="Sprite2D" parent="glithch" unique_id=974792502]
+position = Vector2(1290.8281, 2586.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame4" type="Sprite2D" parent="glithch" unique_id=1503807920]
+position = Vector2(3013.7617, 497.77777)
+scale = Vector2(0.7431228, 10.111112)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame5" type="Sprite2D" parent="glithch" unique_id=442273108]
+position = Vector2(2642.1992, -191.11115)
+scale = Vector2(0.7431228, 10.111112)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame6" type="Sprite2D" parent="glithch" unique_id=1732221790]
+position = Vector2(2320.1836, 2373.3335)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame7" type="Sprite2D" parent="glithch" unique_id=308574727]
+position = Vector2(1822.0156, 653.33325)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame8" type="Sprite2D" parent="glithch" unique_id=1522971372]
+position = Vector2(1992.6602, 528.8889)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame9" type="Sprite2D" parent="glithch" unique_id=1386095778]
+position = Vector2(62.61328, 2106.6667)
+scale = Vector2(0.58944297, 0.3055556)
+texture = ExtResource("9_gao26")
+
+[node name="Label13" type="Label" parent="." unique_id=1012002707]
+offset_left = 7184.0
+offset_top = 158.0
+offset_right = 7513.0
+offset_bottom = 223.0
+text = "okay, i did warn you"
+label_settings = SubResource("LabelSettings_6dme1")
+
+[node name="PixilFrame0" type="Sprite2D" parent="." unique_id=300778169]
+position = Vector2(8995.5, -759.00006)
+scale = Vector2(3.1016667, 9.8325)
+texture = ExtResource("9_gao26")
+
+[node name="Platforms5" parent="." unique_id=1917778946 instance=ExtResource("3_swytx")]
+position = Vector2(5850, 64)
+rotation = 1.5707964
+scale = Vector2(0.08, 0.08)
+
+[node name="Platforms6" parent="." unique_id=1974417257 instance=ExtResource("3_swytx")]
+position = Vector2(9350, 293)
+
+[node name="Kill block4" parent="." unique_id=607567294 instance=ExtResource("11_cgfo6")]
+position = Vector2(10686.001, -1237)
+scale = Vector2(1.9340001, 65.956665)
+
+[node name="Label14" type="Label" parent="." unique_id=1096381795]
+offset_left = 9906.0
+offset_top = -56.0
+offset_right = 10348.0
+offset_bottom = 9.0
+text = "                         Hahahaha, lol 
+            there's really nothing here"
+label_settings = SubResource("LabelSettings_6dme1")
+
+[node name="Label15" type="Label" parent="." unique_id=1382313416]
+offset_left = 10023.0
+offset_top = 35.0
+offset_right = 10242.0
+offset_bottom = 100.0
+text = "   hope you enjoyed 
+this fun little game!"
+label_settings = SubResource("LabelSettings_6dme1")
+
+[node name="Label16" type="Label" parent="." unique_id=478294144]
+offset_left = 10219.0
+offset_top = 117.0
+offset_right = 10438.0
+offset_bottom = 198.0
+text = "         Before you go 
+just keep out of trouble 
+and dont come back here"
+label_settings = SubResource("LabelSettings_8lbo1")
+
+[node name="Kill block5" parent="." unique_id=1109710897 instance=ExtResource("11_cgfo6")]
+position = Vector2(8567, 222)
+
+[node name="Platforms7" parent="." unique_id=1784147215 instance=ExtResource("3_swytx")]
+position = Vector2(8498, 244)
+scale = Vector2(0.07, 0.07)
+
+[node name="Platforms8" parent="." unique_id=1523559191 instance=ExtResource("3_swytx")]
+position = Vector2(8732, 201)
+scale = Vector2(0.07, 0.07)
+
+[node name="Platforms9" parent="." unique_id=2080108284 instance=ExtResource("3_swytx")]
+position = Vector2(8983, 158)
+scale = Vector2(0.07, 0.07)
+
+[node name="Kill block6" parent="." unique_id=1775366482 instance=ExtResource("11_cgfo6")]
+position = Vector2(9291, 252)
+
+[node name="Kill block7" parent="." unique_id=1485418975 instance=ExtResource("11_cgfo6")]
+position = Vector2(8990, 253)
+
+[node name="Kill block8" parent="." unique_id=8329649 instance=ExtResource("11_cgfo6")]
+position = Vector2(8690, 255)
+
+[node name="Kill block9" parent="." unique_id=1259531864 instance=ExtResource("11_cgfo6")]
+position = Vector2(8554, 19)
+
+[node name="moving_killB" parent="." unique_id=1971803004 instance=ExtResource("12_5sf7w")]
+position = Vector2(8290, 196)
+
+[node name="Kill block10" parent="." unique_id=290877648 instance=ExtResource("11_cgfo6")]
+position = Vector2(9256, -49)
+
+[node name="glithch2" type="Sprite2D" parent="." unique_id=1959756539]
+position = Vector2(10386, -32)
+scale = Vector2(0.18166667, 0.1125)
+texture = ExtResource("9_gao26")
+metadata/_edit_group_ = true
+
+[node name="PixilFrame10" type="Sprite2D" parent="glithch2" unique_id=1847103704]
+position = Vector2(170.64453, -124.4444)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame11" type="Sprite2D" parent="glithch2" unique_id=1693390438]
+position = Vector2(911.0078, 653.3333)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame12" type="Sprite2D" parent="glithch2" unique_id=345674488]
+position = Vector2(484.40625, 1146.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame13" type="Sprite2D" parent="glithch2" unique_id=1787016022]
+position = Vector2(2207.336, -942.22235)
+scale = Vector2(0.7431228, 10.111112)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame14" type="Sprite2D" parent="glithch2" unique_id=276670422]
+position = Vector2(1835.7773, -1631.1113)
+scale = Vector2(0.7431228, 10.111112)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame15" type="Sprite2D" parent="glithch2" unique_id=1048594625]
+position = Vector2(1513.7617, 933.3334)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame16" type="Sprite2D" parent="glithch2" unique_id=631373076]
+position = Vector2(1015.59375, -786.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame17" type="Sprite2D" parent="glithch2" unique_id=2004454804]
+position = Vector2(1186.2383, -911.11115)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame18" type="Sprite2D" parent="glithch2" unique_id=1638107469]
+position = Vector2(2578.8984, 1866.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame19" type="Sprite2D" parent="glithch2" unique_id=1370545264]
+position = Vector2(2749.543, 1742.2224)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame20" type="Sprite2D" parent="glithch2" unique_id=1352727445]
+position = Vector2(3489.9063, 2520)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame21" type="Sprite2D" parent="glithch2" unique_id=1136372609]
+position = Vector2(3063.3047, 3013.3335)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame22" type="Sprite2D" parent="glithch2" unique_id=1577417837]
+position = Vector2(4092.6602, 2800)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame23" type="Sprite2D" parent="glithch2" unique_id=2060591044]
+position = Vector2(3594.4922, 1080)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame24" type="Sprite2D" parent="glithch2" unique_id=1528110282]
+position = Vector2(3765.1367, 955.55554)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame25" type="Sprite2D" parent="glithch2" unique_id=656849830]
+position = Vector2(1772.4766, 426.66666)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame26" type="Sprite2D" parent="glithch2" unique_id=1742716565]
+position = Vector2(1943.1211, 302.2223)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame27" type="Sprite2D" parent="glithch2" unique_id=911856397]
+position = Vector2(2683.4844, 1080)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame28" type="Sprite2D" parent="glithch2" unique_id=435547050]
+position = Vector2(2256.8828, 1573.3334)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame29" type="Sprite2D" parent="glithch2" unique_id=1612811142]
+position = Vector2(3286.2383, 1360)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame30" type="Sprite2D" parent="glithch2" unique_id=1587448398]
+position = Vector2(2788.0703, -360.00006)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame31" type="Sprite2D" parent="glithch2" unique_id=623299188]
+position = Vector2(2958.7148, -484.44452)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame32" type="Sprite2D" parent="glithch2" unique_id=1245994303]
+position = Vector2(2578.8984, 1866.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame33" type="Sprite2D" parent="glithch2" unique_id=641636528]
+position = Vector2(2749.543, 1742.2224)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame34" type="Sprite2D" parent="glithch2" unique_id=1188699662]
+position = Vector2(3489.9063, 2520)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame35" type="Sprite2D" parent="glithch2" unique_id=206606974]
+position = Vector2(3063.3047, 3013.3335)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame36" type="Sprite2D" parent="glithch2" unique_id=2131126094]
+position = Vector2(4092.6602, 2800)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame37" type="Sprite2D" parent="glithch2" unique_id=1945319367]
+position = Vector2(3594.4922, 1080)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame38" type="Sprite2D" parent="glithch2" unique_id=1933171857]
+position = Vector2(3765.1367, 955.55554)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame39" type="Sprite2D" parent="glithch2" unique_id=1941466474]
+position = Vector2(1772.4766, 426.66666)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame40" type="Sprite2D" parent="glithch2" unique_id=1624081935]
+position = Vector2(1943.1211, 302.2223)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame41" type="Sprite2D" parent="glithch2" unique_id=2133353756]
+position = Vector2(2683.4844, 1080)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame42" type="Sprite2D" parent="glithch2" unique_id=472292945]
+position = Vector2(2256.8828, 1573.3334)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame43" type="Sprite2D" parent="glithch2" unique_id=1406949547]
+position = Vector2(3286.2383, 1360)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame44" type="Sprite2D" parent="glithch2" unique_id=2085329086]
+position = Vector2(2788.0703, -360.00006)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame45" type="Sprite2D" parent="glithch2" unique_id=1249773869]
+position = Vector2(2958.7148, -484.44452)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame46" type="Sprite2D" parent="glithch2" unique_id=1008597932]
+position = Vector2(3503.668, 284.44443)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame47" type="Sprite2D" parent="glithch2" unique_id=220091616]
+position = Vector2(3674.3125, 160.00006)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame48" type="Sprite2D" parent="glithch2" unique_id=912618406]
+position = Vector2(4414.676, 937.77783)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame49" type="Sprite2D" parent="glithch2" unique_id=1371186192]
+position = Vector2(3988.0742, 1431.1111)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame50" type="Sprite2D" parent="glithch2" unique_id=1016368789]
+position = Vector2(4519.2656, -502.22223)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame51" type="Sprite2D" parent="glithch2" unique_id=388771362]
+position = Vector2(4689.91, -626.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame52" type="Sprite2D" parent="glithch2" unique_id=50592110]
+position = Vector2(2697.246, -1155.5557)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame53" type="Sprite2D" parent="glithch2" unique_id=1043196794]
+position = Vector2(2867.8906, -1280)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame54" type="Sprite2D" parent="glithch2" unique_id=576674852]
+position = Vector2(3608.254, -502.22223)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame55" type="Sprite2D" parent="glithch2" unique_id=841627059]
+position = Vector2(3181.6523, -8.888916)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame56" type="Sprite2D" parent="glithch2" unique_id=21200732]
+position = Vector2(4211.0117, -222.22223)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame57" type="Sprite2D" parent="glithch2" unique_id=1847776796]
+position = Vector2(3712.8438, -1942.2224)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame58" type="Sprite2D" parent="glithch2" unique_id=343079820]
+position = Vector2(3883.4883, -2066.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame60" type="Sprite2D" parent="glithch2" unique_id=918190956]
+position = Vector2(4640.367, -853.33344)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame62" type="Sprite2D" parent="glithch2" unique_id=1920649356]
+position = Vector2(4640.367, -853.33344)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame59" type="Sprite2D" parent="glithch2" unique_id=1688128020]
+position = Vector2(5122.0156, 577.77783)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame61" type="Sprite2D" parent="glithch2" unique_id=925921793]
+position = Vector2(6107.336, 2622.2224)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame63" type="Sprite2D" parent="glithch2" unique_id=1497079237]
+position = Vector2(4629.3555, 408.8889)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame64" type="Sprite2D" parent="glithch2" unique_id=1865477430]
+position = Vector2(5160.547, -1524.4446)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame65" type="Sprite2D" parent="glithch2" unique_id=1050938999]
+position = Vector2(5331.1914, -1648.8892)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame66" type="Sprite2D" parent="glithch2" unique_id=78984557]
+position = Vector2(7634.8594, 1782.2222)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame67" type="Sprite2D" parent="glithch2" unique_id=207122947]
+position = Vector2(8237.613, 2062.2224)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame68" type="Sprite2D" parent="glithch2" unique_id=832601716]
+position = Vector2(7431.1914, 622.2222)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame69" type="Sprite2D" parent="glithch2" unique_id=604759727]
+position = Vector2(7103.668, -1222.2224)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame70" type="Sprite2D" parent="glithch2" unique_id=790868128]
+position = Vector2(7648.621, -453.33344)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame71" type="Sprite2D" parent="glithch2" unique_id=1679576372]
+position = Vector2(7819.2656, -577.7778)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame72" type="Sprite2D" parent="glithch2" unique_id=16468798]
+position = Vector2(7857.793, -2680.0002)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame73" type="Sprite2D" parent="glithch2" unique_id=460007913]
+position = Vector2(6305.504, -400.00018)
+scale = Vector2(2.7752333, 1.6777782)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame74" type="Sprite2D" parent="glithch2" unique_id=1363707866]
+position = Vector2(6454.129, -648.889)
+scale = Vector2(2.7752333, 1.6777782)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame75" type="Sprite2D" parent="glithch2" unique_id=226267293]
+position = Vector2(5488.0703, 1191.1111)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame76" type="Sprite2D" parent="glithch2" unique_id=292953230]
+position = Vector2(5658.715, 1066.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame77" type="Sprite2D" parent="glithch2" unique_id=1533008687]
+position = Vector2(6399.082, 1844.4446)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame78" type="Sprite2D" parent="glithch2" unique_id=93246709]
+position = Vector2(5501.832, 2204.4446)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame79" type="Sprite2D" parent="glithch2" unique_id=1517769457]
+position = Vector2(7001.836, 2124.4446)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame80" type="Sprite2D" parent="glithch2" unique_id=1274268787]
+position = Vector2(7260.547, 1617.7778)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame81" type="Sprite2D" parent="glithch2" unique_id=615450864]
+position = Vector2(8171.5586, 2271.111)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame82" type="Sprite2D" parent="glithch2" unique_id=227241726]
+position = Vector2(7744.957, 2764.4446)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame83" type="Sprite2D" parent="glithch2" unique_id=1562307367]
+position = Vector2(8276.145, 831.1111)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame84" type="Sprite2D" parent="glithch2" unique_id=2094059628]
+position = Vector2(8446.789, 706.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame85" type="Sprite2D" parent="glithch2" unique_id=1605427621]
+position = Vector2(7967.8906, 1111.1111)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame86" type="Sprite2D" parent="glithch2" unique_id=1907885849]
+position = Vector2(8669.727, 1182.2223)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame0" type="Sprite2D" parent="glithch2" unique_id=1195978971]
+position = Vector2(806.4219, 1440)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame1" type="Sprite2D" parent="glithch2" unique_id=1748909888]
+position = Vector2(977.0664, 1315.5557)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame2" type="Sprite2D" parent="glithch2" unique_id=1817850179]
+position = Vector2(1717.4297, 2093.3335)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame3" type="Sprite2D" parent="glithch2" unique_id=244386494]
+position = Vector2(1290.8281, 2586.6667)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame4" type="Sprite2D" parent="glithch2" unique_id=1130771688]
+position = Vector2(3013.7617, 497.77777)
+scale = Vector2(0.7431228, 10.111112)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame5" type="Sprite2D" parent="glithch2" unique_id=1959119165]
+position = Vector2(2642.1992, -191.11115)
+scale = Vector2(0.7431228, 10.111112)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame6" type="Sprite2D" parent="glithch2" unique_id=2020784461]
+position = Vector2(2320.1836, 2373.3335)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame7" type="Sprite2D" parent="glithch2" unique_id=1865087879]
+position = Vector2(1822.0156, 653.33325)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame8" type="Sprite2D" parent="glithch2" unique_id=1719029731]
+position = Vector2(1992.6602, 528.8889)
+texture = ExtResource("9_gao26")
+
+[node name="PixilFrame9" type="Sprite2D" parent="glithch2" unique_id=1177537934]
+position = Vector2(62.61328, 2106.6667)
+scale = Vector2(0.58944297, 0.3055556)
+texture = ExtResource("9_gao26")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1241161752]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1205806683]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(2000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1210645958]
+position = Vector2(146, 8)
+texture = ExtResource("13_n2ce6")
+
+[node name="PixilFrame0(4)5" type="Sprite2D" parent="." unique_id=970649479]
+position = Vector2(8497.729, 243.25)
+scale = Vector2(0.36508518, -0.0050000236)
+texture = ExtResource("2_svuym")
+
+[node name="PixilFrame0(4)6" type="Sprite2D" parent="." unique_id=1212114958]
+position = Vector2(8732, 201)
+scale = Vector2(0.36508518, -0.0050000236)
+texture = ExtResource("2_svuym")
+
+[node name="PixilFrame0(4)7" type="Sprite2D" parent="." unique_id=523650330]
+position = Vector2(8983.001, 158)
+scale = Vector2(0.36508518, -0.0050000236)
+texture = ExtResource("2_svuym")
+
+[node name="Sfx_confettie" type="AudioStreamPlayer" parent="." unique_id=676441691]
+stream = ExtResource("14_r0rmr")
+
+[connection signal="body_entered" from="score" to="score" method="_on_body_entered"]

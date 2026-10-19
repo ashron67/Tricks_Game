@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://cbrhwaxpnds8j"]
+
+[ext_resource type="PackedScene" uid="uid://dbjryr0ut61rl" path="res://Sceans/platforms.tscn" id="1_lgr8d"]
+[ext_resource type="PackedScene" uid="uid://bra6xarc02te0" path="res://Sceans/character_body_2d.tscn" id="2_41aj4"]
+[ext_resource type="PackedScene" uid="uid://bh7nnqjfjojtk" path="res://Sceans/kill_block.tscn" id="3_g6rfw"]
+[ext_resource type="PackedScene" uid="uid://cq4vuvu7dbja0" path="res://Sceans/player_detecting_kill_block.tscn" id="4_be20s"]
+[ext_resource type="FontFile" uid="uid://hp4p3coyoqmm" path="res://Assets/Fonts/The Bandit and the Lone Rider.ttf" id="5_wiioa"]
+[ext_resource type="FontFile" uid="uid://cbreb82wgeiss" path="res://Assets/Fonts/Picsue Sans Trial.otf" id="6_t8qd4"]
+[ext_resource type="Script" uid="uid://2v4k5wu8u4al" path="res://Scripts/protal_4.gd" id="7_gqqsa"]
+[ext_resource type="Texture2D" uid="uid://do0s7xplrma6q" path="res://Assets/other/icon.svg" id="8_yp36r"]
+[ext_resource type="Texture2D" uid="uid://bvf6e5xjln6ex" path="res://Assets/Platforms/untitled-pixel-art@4x.png" id="9_f6scr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mbixn"]
+font = ExtResource("5_wiioa")
+font_size = 74
+font_color = Color(0, 0, 0, 1)
+outline_size = 7
+outline_color = Color(0.74509805, 0.2, 0.1882353, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_h58ty"]
+font = ExtResource("6_t8qd4")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxgpp"]
+size = Vector2(87.5, 77.75)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wxgpp"]
+font = ExtResource("6_t8qd4")
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[node name="leval 4" type="Node2D" unique_id=1886740179]
+
+[node name="Platforms" parent="." unique_id=88795311 instance=ExtResource("1_lgr8d")]
+position = Vector2(242, 259)
+
+[node name="Player" parent="." unique_id=1165395594 instance=ExtResource("2_41aj4")]
+position = Vector2(742, -29)
+
+[node name="Platforms2" parent="." unique_id=287086444 instance=ExtResource("1_lgr8d")]
+position = Vector2(-1557, 140)
+
+[node name="Kill block2" parent="." unique_id=1967891619 instance=ExtResource("3_g6rfw")]
+position = Vector2(205, 221)
+
+[node name="PlayerDetecting-kill block" parent="." unique_id=2101200475 instance=ExtResource("4_be20s")]
+position = Vector2(578, 220)
+
+[node name="PlayerDetecting-kill block3" parent="." unique_id=668236212 instance=ExtResource("4_be20s")]
+position = Vector2(-511, 100)
+
+[node name="Label" type="Label" parent="." unique_id=1642067483]
+offset_left = 62.0
+offset_top = -204.0
+offset_right = 424.0
+offset_bottom = -129.0
+text = "Watch out!"
+label_settings = SubResource("LabelSettings_mbixn")
+
+[node name="popup_text" type="Label" parent="." unique_id=791635751]
+visible = false
+offset_left = 214.0
+offset_top = 58.0
+offset_right = 464.0
+offset_bottom = 98.0
+text = "Almost got you >: "
+label_settings = SubResource("LabelSettings_h58ty")
+
+[node name="Protal_4" type="Area2D" parent="." unique_id=628641064]
+script = ExtResource("7_gqqsa")
+
+[node name="Icon" type="Sprite2D" parent="Protal_4" unique_id=1097299826]
+position = Vector2(-1071, 80.00001)
+scale = Vector2(0.703125, 0.640625)
+texture = ExtResource("8_yp36r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Protal_4" unique_id=1893492029]
+position = Vector2(-1071.25, 79.875)
+shape = SubResource("RectangleShape2D_wxgpp")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=796286571]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=332149676]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(2000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1634621415]
+texture = ExtResource("9_f6scr")
+
+[node name="Label2" type="Label" parent="." unique_id=814050702]
+offset_left = -792.0
+offset_top = 17.0
+offset_right = -752.0
+offset_bottom = 45.0
+text = "LOL*"
+label_settings = SubResource("LabelSettings_wxgpp")
+
+[connection signal="body_entered" from="Protal_4" to="Protal_4" method="_on_body_entered"]

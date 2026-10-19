@@ -1,0 +1,238 @@
+[gd_scene format=3 uid="uid://rvll26rspxmp"]
+
+[ext_resource type="PackedScene" uid="uid://dbjryr0ut61rl" path="res://Sceans/platforms.tscn" id="1_kbauo"]
+[ext_resource type="PackedScene" uid="uid://bra6xarc02te0" path="res://Sceans/character_body_2d.tscn" id="2_sxmm1"]
+[ext_resource type="PackedScene" uid="uid://bh7nnqjfjojtk" path="res://Sceans/kill_block.tscn" id="3_ivf02"]
+[ext_resource type="Script" uid="uid://cajjy0y5yqnrr" path="res://Scripts/StairLoop.gd" id="4_hk876"]
+[ext_resource type="FontFile" uid="uid://hp4p3coyoqmm" path="res://Assets/Fonts/The Bandit and the Lone Rider.ttf" id="5_rndjg"]
+[ext_resource type="FontFile" uid="uid://cbreb82wgeiss" path="res://Assets/Fonts/Picsue Sans Trial.otf" id="6_rv55o"]
+[ext_resource type="Script" uid="uid://dcggq1f8ln4j3" path="res://Scripts/portal_9.gd" id="7_qhxlt"]
+[ext_resource type="Texture2D" uid="uid://do0s7xplrma6q" path="res://Assets/other/icon.svg" id="8_m2e7g"]
+[ext_resource type="Texture2D" uid="uid://bvf6e5xjln6ex" path="res://Assets/Platforms/untitled-pixel-art@4x.png" id="9_77ckg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjtur"]
+size = Vector2(70, 134)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wx068"]
+font = ExtResource("5_rndjg")
+font_size = 71
+font_color = Color(0, 0, 0, 1)
+outline_size = 7
+outline_color = Color(0.74509805, 0.2, 0.1882353, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_smhig"]
+font = ExtResource("6_rv55o")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_wxpmh"]
+font = ExtResource("6_rv55o")
+font_size = 29
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_di6co"]
+font = ExtResource("6_rv55o")
+font_size = 29
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_q8ecc"]
+font = ExtResource("6_rv55o")
+font_size = 28
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_rgtrw"]
+font = ExtResource("6_rv55o")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_8qlvu"]
+font = ExtResource("6_rv55o")
+font_size = 28
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_xrs66"]
+font = ExtResource("6_rv55o")
+font_size = 38
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_yy3sr"]
+font = ExtResource("6_rv55o")
+font_size = 29
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_sd5c3"]
+font = ExtResource("6_rv55o")
+font_size = 39
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8ecc"]
+size = Vector2(92, 87)
+
+[node name="level_9" type="Node2D" unique_id=772158558]
+texture_filter = 1
+
+[node name="Platforms" parent="." unique_id=88795311 instance=ExtResource("1_kbauo")]
+position = Vector2(154, 222)
+
+[node name="Player" parent="." unique_id=1165395594 instance=ExtResource("2_sxmm1")]
+position = Vector2(804, 125)
+
+[node name="Platforms2" parent="." unique_id=1112462398 instance=ExtResource("1_kbauo")]
+position = Vector2(195, 152)
+scale = Vector2(0.305, 0.305)
+
+[node name="Platforms3" parent="." unique_id=1881511274 instance=ExtResource("1_kbauo")]
+position = Vector2(-42, 61)
+scale = Vector2(0.305, 0.305)
+
+[node name="Platforms5" parent="." unique_id=250464073 instance=ExtResource("1_kbauo")]
+position = Vector2(-488, -102.99999)
+scale = Vector2(0.305, 0.305)
+
+[node name="Platforms7" parent="." unique_id=1950096183 instance=ExtResource("1_kbauo")]
+position = Vector2(-1211, -240)
+scale = Vector2(0.305, 0.305)
+
+[node name="Platforms8" parent="." unique_id=1261913313 instance=ExtResource("1_kbauo")]
+position = Vector2(-1537, -293)
+scale = Vector2(0.305, 0.305)
+
+[node name="Platforms9" parent="." unique_id=663961345 instance=ExtResource("1_kbauo")]
+position = Vector2(-1178, 0)
+
+[node name="Platforms4" parent="." unique_id=11166030 instance=ExtResource("1_kbauo")]
+position = Vector2(-1918, -151)
+
+[node name="Kill block" parent="." unique_id=899846819 instance=ExtResource("3_ivf02")]
+position = Vector2(-304, -130)
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=907672856]
+script = ExtResource("4_hk876")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=432651132]
+position = Vector2(-1050, -304)
+shape = SubResource("RectangleShape2D_cjtur")
+
+[node name="Label2" type="Label" parent="." unique_id=1804332913]
+offset_left = 318.0
+offset_top = -210.0
+offset_right = 756.0
+offset_bottom = -138.0
+text = "The Unending Stairs"
+label_settings = SubResource("LabelSettings_wx068")
+
+[node name="Label" type="Label" parent="." unique_id=529367123]
+visible = false
+offset_left = -450.0
+offset_top = -214.0
+offset_right = -196.0
+offset_bottom = -172.0
+text = "It really is unending"
+label_settings = SubResource("LabelSettings_smhig")
+
+[node name="Label3" type="Label" parent="." unique_id=1612005740]
+visible = false
+offset_left = 239.0
+offset_top = -81.0
+offset_right = 327.0
+offset_bottom = -58.0
+text = "Welcome back!"
+label_settings = SubResource("LabelSettings_wxpmh")
+
+[node name="Label4" type="Label" parent="." unique_id=1043361057]
+visible = false
+offset_left = -447.0
+offset_top = -236.0
+offset_right = -328.0
+offset_bottom = -211.0
+text = "You're stuck >:]"
+label_settings = SubResource("LabelSettings_di6co")
+
+[node name="Label5" type="Label" parent="." unique_id=108354984]
+visible = false
+offset_left = 53.0
+offset_top = -115.0
+offset_right = 370.0
+offset_bottom = -80.0
+text = "Press Alt+F4 for elevator"
+label_settings = SubResource("LabelSettings_q8ecc")
+
+[node name="Label6" type="Label" parent="." unique_id=1927967618]
+visible = false
+offset_left = -551.0
+offset_top = -265.0
+offset_right = -222.0
+offset_bottom = -225.0
+text = "Enjoying the cardio? 🏃"
+label_settings = SubResource("LabelSettings_rgtrw")
+
+[node name="Label7" type="Label" parent="." unique_id=1610343441]
+visible = false
+offset_left = 248.0
+offset_top = -71.0
+offset_right = 590.0
+offset_bottom = -32.0
+text = "Spoiler: The top isn't real"
+label_settings = SubResource("LabelSettings_8qlvu")
+
+[node name="Label8" type="Label" parent="." unique_id=980035610]
+visible = false
+offset_left = -469.0
+offset_top = -262.0
+offset_right = -283.0
+offset_bottom = -215.0
+text = "Still going?"
+label_settings = SubResource("LabelSettings_xrs66")
+
+[node name="Label9" type="Label" parent="." unique_id=1378521638]
+visible = false
+offset_left = -94.0
+offset_top = -232.0
+offset_right = 156.0
+offset_bottom = -157.0
+text = "I can do this all day 
+         ^_____^"
+label_settings = SubResource("LabelSettings_yy3sr")
+
+[node name="Label10" type="Label" parent="." unique_id=156941955]
+visible = false
+offset_left = -473.0
+offset_top = -386.0
+offset_right = -140.0
+offset_bottom = -287.0
+text = "Have you considered
+turning around?"
+label_settings = SubResource("LabelSettings_sd5c3")
+
+[node name="Portal_9" type="Area2D" parent="." unique_id=924738993]
+script = ExtResource("7_qhxlt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Portal_9" unique_id=649289133]
+position = Vector2(1141, 164)
+scale = Vector2(0.72656274, 0.6796875)
+texture = ExtResource("8_m2e7g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_9" unique_id=1848593423]
+position = Vector2(1141, 163.5)
+shape = SubResource("RectangleShape2D_q8ecc")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1345237934]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1951215067]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(2000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=2084860971]
+texture = ExtResource("9_77ckg")
+
+[connection signal="body_entered" from="DetectionArea" to="DetectionArea" method="_on_body_entered"]
+[connection signal="body_entered" from="Portal_9" to="Portal_9" method="_on_body_entered"]

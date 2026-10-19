@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dbjryr0ut61rl"]
+
+[ext_resource type="Texture2D" uid="uid://xwef24dm0vm" path="res://Assets/Platforms/pixil-frame-0.png" id="1_l581v"]
+[ext_resource type="Texture2D" uid="uid://cto8l7b685mbg" path="res://Assets/Platforms/untitled-pixel-art@4x (2).png" id="2_jc4oj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jc4oj"]
+size = Vector2(2624, 470)
+
+[node name="Platforms" type="StaticBody2D" unique_id=88795311]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1512384332]
+texture_filter = 1
+position = Vector2(-7, -16)
+scale = Vector2(4.3671875, 2.3474998)
+texture = ExtResource("1_l581v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1825757707]
+visible = false
+position = Vector2(-6, 219)
+shape = SubResource("RectangleShape2D_jc4oj")
+
+[node name="UntitledPixelArt_4x(2)" type="Sprite2D" parent="." unique_id=807519329]
+position = Vector2(-51.99999, 25.999985)
+scale = Vector2(22.59375, 10.671875)
+texture = ExtResource("2_jc4oj")

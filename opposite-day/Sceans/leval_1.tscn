@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://dn7dfpqwb6878"]
+
+[ext_resource type="PackedScene" uid="uid://bra6xarc02te0" path="res://Sceans/character_body_2d.tscn" id="1_l0oam"]
+[ext_resource type="PackedScene" uid="uid://bh7nnqjfjojtk" path="res://Sceans/kill_block.tscn" id="2_1gu6p"]
+[ext_resource type="PackedScene" uid="uid://dbjryr0ut61rl" path="res://Sceans/platforms.tscn" id="3_7edep"]
+[ext_resource type="FontFile" uid="uid://hp4p3coyoqmm" path="res://Assets/Fonts/The Bandit and the Lone Rider.ttf" id="4_og61e"]
+[ext_resource type="Script" uid="uid://b60fyggg2hj8a" path="res://Scripts/portal.gd" id="5_r0rs4"]
+[ext_resource type="Texture2D" uid="uid://do0s7xplrma6q" path="res://Assets/other/icon.svg" id="6_0m6mw"]
+[ext_resource type="Texture2D" uid="uid://bvf6e5xjln6ex" path="res://Assets/Platforms/untitled-pixel-art@4x.png" id="7_6xn2n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a2ceh"]
+font = ExtResource("4_og61e")
+font_size = 85
+font_color = Color(0, 0, 0, 1)
+outline_size = 7
+outline_color = Color(0.74661577, 0.19883543, 0.18633711, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gsu7e"]
+size = Vector2(132, 132)
+
+[node name="Leval 1" type="Node2D" unique_id=2146997663]
+texture_filter = 1
+
+[node name="Player" parent="." unique_id=1165395594 node_paths=PackedStringArray("spawn_point") instance=ExtResource("1_l0oam")]
+texture_filter = 1
+position = Vector2(118, 74)
+spawn_point = NodePath("../spawn_point")
+
+[node name="Kill block2" parent="." unique_id=1055872696 instance=ExtResource("2_1gu6p")]
+position = Vector2(904.00006, 47)
+scale = Vector2(0.38099986, 8.69)
+
+[node name="Kill block3" parent="." unique_id=899846819 instance=ExtResource("2_1gu6p")]
+position = Vector2(550.25, 233)
+scale = Vector2(0.7309999, 1)
+
+[node name="Kill block" parent="." unique_id=365255351 instance=ExtResource("2_1gu6p")]
+position = Vector2(-161.00002, 126)
+scale = Vector2(2.5400002, 1)
+
+[node name="Platforms" parent="." unique_id=88795311 instance=ExtResource("3_7edep")]
+position = Vector2(522, 273)
+
+[node name="Platforms2" parent="." unique_id=1668486674 instance=ExtResource("3_7edep")]
+position = Vector2(-1269, 165)
+
+[node name="Label" type="Label" parent="." unique_id=553647466]
+offset_left = -142.0
+offset_top = -206.0
+offset_right = 436.0
+offset_bottom = -109.0
+text = "GO THIS WAY --->"
+label_settings = SubResource("LabelSettings_a2ceh")
+metadata/_edit_use_anchors_ = true
+
+[node name="Portal1" type="Area2D" parent="." unique_id=633054318]
+texture_filter = 1
+position = Vector2(-1079, 79)
+script = ExtResource("5_r0rs4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Portal1" unique_id=1412725887]
+texture_filter = 1
+position = Vector2(7, -7)
+texture = ExtResource("6_0m6mw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal1" unique_id=1100851867]
+texture_filter = 1
+position = Vector2(7, -6)
+shape = SubResource("RectangleShape2D_gsu7e")
+
+[node name="spawn_point" type="Marker2D" parent="." unique_id=1363276067]
+texture_filter = 1
+position = Vector2(242, 71)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1406462916]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1991275980]
+position = Vector2(584, 271)
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(2000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=199768271]
+position = Vector2(58, -39)
+texture = ExtResource("7_6xn2n")
+
+[connection signal="body_entered" from="Portal1" to="Portal1" method="_on_body_entered"]

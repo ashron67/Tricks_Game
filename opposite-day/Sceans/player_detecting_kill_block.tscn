@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cq4vuvu7dbja0"]
+
+[ext_resource type="Script" uid="uid://ctrrefomlot1c" path="res://Scripts/DetectingKillBlock.gd" id="1_kfvd6"]
+[ext_resource type="Texture2D" uid="uid://b66vrsam0ef85" path="res://Assets/Platforms/pixil-frame-0 (3).png" id="1_ueb1f"]
+[ext_resource type="Script" uid="uid://2h1aieml4iqe" path="res://Scripts/DetectionArea_KillBlock.gd" id="2_kfvd6"]
+[ext_resource type="Texture2D" uid="uid://ca2xvkcamwppq" path="res://Assets/Platforms/untitled@4x.png" id="4_8akwk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8akwk"]
+size = Vector2(60, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wne5"]
+size = Vector2(57.5, 194)
+
+[node name="PlayerDetecting-kill block" type="Area2D" unique_id=2101200475]
+script = ExtResource("1_kfvd6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1590928049]
+texture_filter = 1
+position = Vector2(0.5, 0)
+scale = Vector2(0.998, 1)
+texture = ExtResource("1_ueb1f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2091437533]
+position = Vector2(-63, 17.5)
+shape = SubResource("RectangleShape2D_8akwk")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1750806597]
+script = ExtResource("2_kfvd6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1222486032]
+position = Vector2(-51.75, -75)
+shape = SubResource("RectangleShape2D_3wne5")
+
+[node name="Untitled_4x" type="Sprite2D" parent="." unique_id=1795157428]
+texture_filter = 1
+position = Vector2(-62, 18.5)
+scale = Vector2(0.2620968, 0.75)
+texture = ExtResource("4_8akwk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="DetectionArea" to="DetectionArea" method="_on_body_entered"]

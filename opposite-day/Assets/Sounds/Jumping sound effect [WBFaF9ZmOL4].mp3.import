@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bohjih3h733xr"
+path="res://.godot/imported/Jumping sound effect [WBFaF9ZmOL4].mp3-c4c140a49e937b56a30383e1ac0b298f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Jumping sound effect [WBFaF9ZmOL4].mp3"
+dest_files=["res://.godot/imported/Jumping sound effect [WBFaF9ZmOL4].mp3-c4c140a49e937b56a30383e1ac0b298f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

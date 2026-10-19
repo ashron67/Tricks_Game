@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://5lwvx60rcjae"]
+
+[ext_resource type="PackedScene" uid="uid://bra6xarc02te0" path="res://Sceans/character_body_2d.tscn" id="1_qqijb"]
+[ext_resource type="PackedScene" uid="uid://6v75sn4xr6qc" path="res://Sceans/moving_platform_small_l.tscn" id="2_p7psj"]
+[ext_resource type="PackedScene" uid="uid://dbjryr0ut61rl" path="res://Sceans/platforms.tscn" id="3_i04cx"]
+[ext_resource type="PackedScene" uid="uid://cx3ytpuc7tg3d" path="res://Sceans/moving_platform_l.tscn" id="4_gf7b3"]
+[ext_resource type="PackedScene" uid="uid://bh7nnqjfjojtk" path="res://Sceans/kill_block.tscn" id="5_5kujs"]
+[ext_resource type="Script" uid="uid://b6s6upbkp2jq8" path="res://Scripts/portal_7.gd" id="6_emrxs"]
+[ext_resource type="Texture2D" uid="uid://do0s7xplrma6q" path="res://Assets/other/icon.svg" id="7_tmvvq"]
+[ext_resource type="FontFile" uid="uid://hp4p3coyoqmm" path="res://Assets/Fonts/The Bandit and the Lone Rider.ttf" id="8_qt8bg"]
+[ext_resource type="FontFile" uid="uid://cbreb82wgeiss" path="res://Assets/Fonts/Picsue Sans Trial.otf" id="9_2e3r5"]
+[ext_resource type="PackedScene" uid="uid://cq4vuvu7dbja0" path="res://Sceans/player_detecting_kill_block.tscn" id="10_mlnh3"]
+[ext_resource type="Texture2D" uid="uid://bvf6e5xjln6ex" path="res://Assets/Platforms/untitled-pixel-art@4x.png" id="11_m0e45"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2rghg"]
+size = Vector2(80, 120)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sb78m"]
+font = ExtResource("8_qt8bg")
+font_size = 63
+font_color = Color(0, 0, 0, 1)
+outline_size = 7
+outline_color = Color(0.74509805, 0.2, 0.1882353, 1)
+shadow_size = 5
+shadow_color = Color(0.15294118, 0.15294118, 0.15294118, 0.56078434)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jewu1"]
+font = ExtResource("9_2e3r5")
+font_size = 23
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[node name="level_7" type="Node2D" unique_id=1067612498]
+
+[node name="Player" parent="." unique_id=1165395594 instance=ExtResource("1_qqijb")]
+position = Vector2(745, -621)
+
+[node name="MovingPlatformSmall_L" parent="." unique_id=815716762 instance=ExtResource("2_p7psj")]
+position = Vector2(533, -450)
+
+[node name="Platforms" parent="." unique_id=88795311 instance=ExtResource("3_i04cx")]
+position = Vector2(1343, -561)
+scale = Vector2(0.825, 0.825)
+
+[node name="Platforms3" parent="." unique_id=363327558 instance=ExtResource("3_i04cx")]
+position = Vector2(939.00024, -825)
+rotation = 1.5707964
+scale = Vector2(0.22, 0.22)
+
+[node name="MovingPlatform_L" parent="." unique_id=1995615201 instance=ExtResource("4_gf7b3")]
+position = Vector2(-563, -572)
+scale = Vector2(1.265, 1.265)
+
+[node name="Kill block" parent="." unique_id=899846819 instance=ExtResource("5_5kujs")]
+position = Vector2(3909, -124)
+scale = Vector2(57.238007, 3.3333333)
+
+[node name="Kill block3" parent="." unique_id=1700209781 instance=ExtResource("5_5kujs")]
+position = Vector2(-729, -589)
+
+[node name="Portal_7" type="Area2D" parent="." unique_id=1353864633]
+position = Vector2(-624, -592)
+script = ExtResource("6_emrxs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Portal_7" unique_id=412132107]
+position = Vector2(-421, -39.999996)
+scale = Vector2(0.6328125, 0.9570312)
+texture = ExtResource("7_tmvvq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_7" unique_id=889530993]
+position = Vector2(-421, -42)
+shape = SubResource("RectangleShape2D_2rghg")
+
+[node name="Label" type="Label" parent="." unique_id=1189990195]
+offset_left = 85.0
+offset_top = -897.0
+offset_right = 288.0
+offset_bottom = -833.0
+text = "HMMM...."
+label_settings = SubResource("LabelSettings_sb78m")
+
+[node name="Label2" type="Label" parent="." unique_id=1723268410]
+offset_left = -637.0
+offset_top = -744.0
+offset_right = -471.0
+offset_bottom = -715.0
+text = "Almost had ya! :P"
+label_settings = SubResource("LabelSettings_jewu1")
+
+[node name="PlayerDetecting-kill block" parent="." unique_id=2101200475 instance=ExtResource("10_mlnh3")]
+position = Vector2(-281, -590)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=651291002]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1669455499]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(2000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=637075175]
+position = Vector2(192, -84)
+texture = ExtResource("11_m0e45")
+
+[connection signal="body_entered" from="Portal_7" to="Portal_7" method="_on_body_entered"]

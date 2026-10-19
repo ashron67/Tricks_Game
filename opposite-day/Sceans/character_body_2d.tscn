@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://bra6xarc02te0"]
+
+[ext_resource type="Script" uid="uid://w3j5coy2c4iq" path="res://Scripts/character_body_2d.gd" id="1_gf7mj"]
+[ext_resource type="Script" uid="uid://rrli0e3m343s" path="res://Scripts/camera_2d.gd" id="3_k6q0h"]
+[ext_resource type="FontFile" uid="uid://cbsg5c57otl48" path="res://Assets/Fonts/valve bd.otf" id="4_1g8wf"]
+[ext_resource type="PackedScene" uid="uid://dtl3u2e6r8jgc" path="res://Sceans/dust.tscn" id="6_1g8wf"]
+[ext_resource type="Texture2D" uid="uid://bvanyronchew2" path="res://Assets/other/Screenshot_2026-08-26_140529-removebg-preview.png" id="6_qkcpc"]
+[ext_resource type="AudioStream" uid="uid://bohjih3h733xr" path="res://Assets/Sounds/Jumping sound effect [WBFaF9ZmOL4].mp3" id="7_7vsf4"]
+[ext_resource type="Texture2D" uid="uid://capci8ix28sj7" path="res://Assets/spirts/untitled-pixel-art@4x (3).png" id="7_qkcpc"]
+
+[sub_resource type="Gradient" id="Gradient_4q7vu"]
+offsets = PackedFloat32Array(0, 0.13106796, 1)
+colors = PackedColorArray(1, 1, 1, 0.14509805, 1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_goqqc"]
+gradient = SubResource("Gradient_4q7vu")
+width = 4000
+height = 4000
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4q7vu"]
+size = Vector2(60, 57.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_k6q0h"]
+font = ExtResource("4_1g8wf")
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+outline_size = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1g8wf"]
+blend_mode = 1
+
+[sub_resource type="Animation" id="Animation_qkcpc"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_1g8wf"]
+resource_name = "run_left"
+length = 0.6
+
+[sub_resource type="Animation" id="Animation_7vsf4"]
+resource_name = "run_right"
+length = 0.6
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vcgaa"]
+_data = {
+&"RESET": SubResource("Animation_qkcpc"),
+&"run_left": SubResource("Animation_1g8wf"),
+&"run_right": SubResource("Animation_7vsf4")
+}
+
+[sub_resource type="Gradient" id="Gradient_auhl5"]
+offsets = PackedFloat32Array(0, 0.45061728, 0.7222222, 1)
+colors = PackedColorArray(0.5410766, 0.13947958, 0.16166532, 1, 0.7921569, 0.6431373, 0.70980394, 1, 1, 1, 1, 0.80030847, 1, 1, 1, 0.59607846)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_l816y"]
+gradient = SubResource("Gradient_auhl5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_o6cvy"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 6.0
+spread = 35.0
+gravity = Vector3(20, 0, 0)
+scale_min = 0.099999994
+scale_max = 0.099999994
+color_ramp = SubResource("GradientTexture1D_l816y")
+
+[node name="Player" type="CharacterBody2D" unique_id=1165395594]
+position = Vector2(7, 1)
+script = ExtResource("1_gf7mj")
+
+[node name="WhiteFog" type="Sprite2D" parent="." unique_id=1352103994]
+visible = false
+z_index = 1
+position = Vector2(-3.9999924, 1)
+scale = Vector2(0.5925, 0.53024995)
+texture = SubResource("GradientTexture2D_goqqc")
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=1344856609]
+z_index = 1
+texture_filter = 1
+position = Vector2(-8.999999, -1.4901161e-07)
+scale = Vector2(0.2421875, 0.2265625)
+texture = ExtResource("7_qkcpc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=323325677]
+z_index = 1
+position = Vector2(-9, 0.25)
+shape = SubResource("RectangleShape2D_4q7vu")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=61201338]
+position_smoothing_enabled = true
+position_smoothing_speed = 3.99
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 3.875
+script = ExtResource("3_k6q0h")
+
+[node name="Timer" type="CanvasLayer" parent="." unique_id=127017779]
+layer = 2
+
+[node name="HUDTimer" type="Label" parent="Timer" unique_id=258515062]
+offset_left = 993.0
+offset_top = 21.0
+offset_right = 1074.0
+offset_bottom = 53.0
+text = "00:00"
+label_settings = SubResource("LabelSettings_k6q0h")
+
+[node name="Screenshot20260826140529RemovebgPreview" type="Sprite2D" parent="Timer" unique_id=1298590478]
+texture_filter = 1
+position = Vector2(1108, 34)
+scale = Vector2(0.08655921, 0.08655921)
+texture = ExtResource("6_qkcpc")
+
+[node name="Screenshot20260826140529RemovebgPreview2" type="Sprite2D" parent="Timer" unique_id=1068075417]
+material = SubResource("CanvasItemMaterial_1g8wf")
+position = Vector2(1108, 33.5)
+scale = Vector2(0.09032256, 0.091439694)
+texture = ExtResource("6_qkcpc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=609627546]
+libraries/ = SubResource("AnimationLibrary_vcgaa")
+
+[node name="Dust" parent="." unique_id=1871856328 instance=ExtResource("6_1g8wf")]
+z_index = 1
+position = Vector2(-9, 28)
+process_material = SubResource("ParticleProcessMaterial_o6cvy")
+
+[node name="SFX_jump" type="AudioStreamPlayer" parent="." unique_id=1766117571]
+stream = ExtResource("7_7vsf4")
+volume_db = 14.167
+pitch_scale = 1.66
+
+[editable path="Dust"]

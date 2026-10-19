@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bg547p2l143fa"]
+
+[ext_resource type="Texture2D" uid="uid://cls7ioy42vjbt" path="res://Assets/other/pixil-frame-0 (5).png" id="1_ws32r"]
+[ext_resource type="Texture2D" uid="uid://cyuup631dp0kt" path="res://Assets/other/pixil-frame-0 (7).png" id="2_pr6yk"]
+[ext_resource type="Texture2D" uid="uid://cfkkr1xih1dsq" path="res://Assets/other/pixil-frame-0 (2).png" id="3_d1181"]
+[ext_resource type="Texture2D" uid="uid://bx6rx08oy178v" path="res://Assets/other/pixil-frame-0 (6).png" id="4_b7xvw"]
+[ext_resource type="Texture2D" uid="uid://bgmtqrjt5gaau" path="res://Assets/other/pixil-frame-0 (4).png" id="5_pux7e"]
+[ext_resource type="Texture2D" uid="uid://cnmxiqc1i5582" path="res://Assets/other/Jump (1).png" id="6_pr6yk"]
+
+[node name="Menue" type="TextureButton" unique_id=234476993]
+
+[node name="MenueButton" type="Sprite2D" parent="." unique_id=2083813213]
+texture_filter = 1
+texture = ExtResource("1_ws32r")
+
+[node name="MenuBord" type="Sprite2D" parent="." unique_id=288344856]
+position = Vector2(558, 322.5)
+scale = Vector2(1.296, 1.186)
+texture = ExtResource("2_pr6yk")
+
+[node name="Instructions" type="Sprite2D" parent="." unique_id=977400157]
+position = Vector2(563, 342.5)
+scale = Vector2(0.35046297, 0.36842105)
+texture = ExtResource("3_d1181")
+
+[node name="Off" type="Sprite2D" parent="." unique_id=1751586122]
+position = Vector2(482.375, 274.25)
+scale = Vector2(0.2956432, 0.2759259)
+texture = ExtResource("4_b7xvw")
+
+[node name="On" type="Sprite2D" parent="." unique_id=798512016]
+position = Vector2(120.000046, 285)
+scale = Vector2(0.28578845, 0.2796297)
+texture = ExtResource("5_pux7e")
+
+[node name="InstructionBorad" type="Sprite2D" parent="." unique_id=541101970]
+position = Vector2(-27, 488)
+scale = Vector2(0.64850533, 0.61714286)
+texture = ExtResource("6_pr6yk")

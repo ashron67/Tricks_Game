@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://bmioxh7wj7huc"]
+
+[ext_resource type="PackedScene" uid="uid://bra6xarc02te0" path="res://Sceans/character_body_2d.tscn" id="1_iftqm"]
+[ext_resource type="PackedScene" uid="uid://b7vnoptugpfv5" path="res://Sceans/moving_kill_block_d.tscn" id="2_rtw7d"]
+[ext_resource type="PackedScene" uid="uid://dbjryr0ut61rl" path="res://Sceans/platforms.tscn" id="3_i7cxj"]
+[ext_resource type="FontFile" uid="uid://hp4p3coyoqmm" path="res://Assets/Fonts/The Bandit and the Lone Rider.ttf" id="4_22trq"]
+[ext_resource type="FontFile" uid="uid://cbreb82wgeiss" path="res://Assets/Fonts/Picsue Sans Trial.otf" id="5_w7j1o"]
+[ext_resource type="Script" uid="uid://iurhji2yt1pr" path="res://Scripts/portal_8.gd" id="6_krxel"]
+[ext_resource type="Texture2D" uid="uid://do0s7xplrma6q" path="res://Assets/other/icon.svg" id="7_75qvo"]
+[ext_resource type="PackedScene" uid="uid://bh7nnqjfjojtk" path="res://Sceans/kill_block.tscn" id="8_e3ury"]
+[ext_resource type="Texture2D" uid="uid://bvf6e5xjln6ex" path="res://Assets/Platforms/untitled-pixel-art@4x.png" id="9_egrmb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ng31c"]
+font = ExtResource("4_22trq")
+font_size = 96
+font_color = Color(0, 0, 0, 1)
+outline_size = 7
+outline_color = Color(0.74509805, 0.2, 0.1882353, 1)
+shadow_size = 6
+shadow_color = Color(0.21176471, 0.21176471, 0.21176471, 0.3372549)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0f8qp"]
+font = ExtResource("5_w7j1o")
+font_size = 21
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sebw1"]
+size = Vector2(68.5, 61)
+
+[node name="level_8" type="Node2D" unique_id=1533973175]
+
+[node name="Player" parent="." unique_id=1165395594 instance=ExtResource("1_iftqm")]
+position = Vector2(752, 209)
+
+[node name="MovingKillBlock_D" parent="." unique_id=33855046 instance=ExtResource("2_rtw7d")]
+position = Vector2(2623.0002, -1356.0001)
+scale = Vector2(43.755, 43.755)
+
+[node name="Platforms" parent="." unique_id=88795311 instance=ExtResource("3_i7cxj")]
+position = Vector2(85, 260.00003)
+
+[node name="Platforms2" parent="." unique_id=1645259969 instance=ExtResource("3_i7cxj")]
+position = Vector2(818, 116.00003)
+scale = Vector2(0.07, 0.07)
+
+[node name="Platforms3" parent="." unique_id=999535035 instance=ExtResource("3_i7cxj")]
+position = Vector2(693, 116.00003)
+scale = Vector2(0.07, 0.07)
+
+[node name="Label" type="Label" parent="." unique_id=1621002082]
+offset_left = -28.0
+offset_top = -221.0
+offset_right = 141.0
+offset_bottom = -124.0
+text = "RUN!!"
+label_settings = SubResource("LabelSettings_ng31c")
+
+[node name="Platforms4" parent="." unique_id=55228442 instance=ExtResource("3_i7cxj")]
+position = Vector2(-30, 141)
+scale = Vector2(0.07, 0.07)
+
+[node name="Platforms6" parent="." unique_id=661359957 instance=ExtResource("3_i7cxj")]
+position = Vector2(-404, 42)
+scale = Vector2(0.07, 0.07)
+
+[node name="Platforms7" parent="." unique_id=1783540275 instance=ExtResource("3_i7cxj")]
+position = Vector2(-764, -43)
+scale = Vector2(0.07, 0.07)
+
+[node name="Platforms8" parent="." unique_id=336536718 instance=ExtResource("3_i7cxj")]
+position = Vector2(-924.99994, -43)
+scale = Vector2(0.07, 0.07)
+
+[node name="Label2" type="Label" parent="." unique_id=2067886074]
+visible = false
+offset_left = 588.0
+offset_top = 76.0
+offset_right = 751.0
+offset_bottom = 102.0
+text = "U got lucky there "
+label_settings = SubResource("LabelSettings_0f8qp")
+
+[node name="Platforms9" parent="." unique_id=1487042790 instance=ExtResource("3_i7cxj")]
+position = Vector2(-1092, -43)
+scale = Vector2(0.07, 0.07)
+
+[node name="Platforms5" parent="." unique_id=472347279 instance=ExtResource("3_i7cxj")]
+position = Vector2(878.99994, 168.00002)
+rotation = 1.5707964
+scale = Vector2(0.07, 0.07)
+
+[node name="Platforms10" parent="." unique_id=1830133471 instance=ExtResource("3_i7cxj")]
+position = Vector2(-1107, -57)
+rotation = 1.5707964
+scale = Vector2(0.07, 0.07)
+
+[node name="Platforms11" parent="." unique_id=1916347354 instance=ExtResource("3_i7cxj")]
+position = Vector2(-1009, -213)
+rotation = 1.5707964
+scale = Vector2(0.07, 0.07)
+
+[node name="Platforms12" parent="." unique_id=2081437695 instance=ExtResource("3_i7cxj")]
+position = Vector2(-1009, 109)
+rotation = 1.5707964
+scale = Vector2(0.07, 0.07)
+
+[node name="Platforms13" parent="." unique_id=1309149804 instance=ExtResource("3_i7cxj")]
+position = Vector2(-1009, 178)
+rotation = 1.5707964
+scale = Vector2(0.07, 0.07)
+
+[node name="Platforms14" parent="." unique_id=162835585 instance=ExtResource("3_i7cxj")]
+position = Vector2(878.99994, 5.0000153)
+rotation = 1.5707964
+scale = Vector2(0.07, 0.07)
+
+[node name="Portal_8" type="Area2D" parent="." unique_id=1696556785]
+script = ExtResource("6_krxel")
+
+[node name="Sprite2D" type="Sprite2D" parent="Portal_8" unique_id=1562726198]
+position = Vector2(-1055, -75)
+scale = Vector2(0.546875, 0.5)
+texture = ExtResource("7_75qvo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_8" unique_id=1667365066]
+position = Vector2(-1054.75, -76)
+shape = SubResource("RectangleShape2D_sebw1")
+
+[node name="Kill block" parent="." unique_id=899846819 instance=ExtResource("8_e3ury")]
+position = Vector2(-781, -67)
+
+[node name="Kill block2" parent="." unique_id=816379455 instance=ExtResource("8_e3ury")]
+position = Vector2(-449, 223)
+
+[node name="Kill block3" parent="." unique_id=1834462258 instance=ExtResource("8_e3ury")]
+position = Vector2(388, 222)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1008974016]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=462206340]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(2000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1799879170]
+texture = ExtResource("9_egrmb")
+
+[connection signal="body_entered" from="Portal_8" to="Portal_8" method="_on_body_entered"]

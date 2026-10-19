@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bodwwen4rkrbg"]
+
+[ext_resource type="Script" uid="uid://chiq1c3nuf4i" path="res://Scripts/moving_kill_b.gd" id="1_dt153"]
+[ext_resource type="Texture2D" uid="uid://b66vrsam0ef85" path="res://Assets/Platforms/pixil-frame-0 (3).png" id="2_flyvj"]
+[ext_resource type="Texture2D" uid="uid://ca2xvkcamwppq" path="res://Assets/Platforms/untitled@4x.png" id="3_flyvj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6welj"]
+size = Vector2(66, 16)
+
+[node name="moving_killB" type="Area2D" unique_id=1971803004]
+script = ExtResource("1_dt153")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1032782656]
+texture_filter = 1
+position = Vector2(1, 0)
+texture = ExtResource("2_flyvj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1303318173]
+position = Vector2(-61, 16)
+shape = SubResource("RectangleShape2D_6welj")
+
+[node name="Untitled_4x" type="Sprite2D" parent="." unique_id=116988052]
+texture_filter = 1
+position = Vector2(-61.25, 18.5)
+scale = Vector2(0.26814517, 0.8214286)
+texture = ExtResource("3_flyvj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

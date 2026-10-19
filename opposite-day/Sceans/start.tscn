@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://npjmcpbsbdic"]
+
+[ext_resource type="Script" uid="uid://i1s46re0qndr" path="res://Scripts/startscean.gd" id="1_4vtkv"]
+[ext_resource type="Texture2D" uid="uid://bvf6e5xjln6ex" path="res://Assets/Platforms/untitled-pixel-art@4x.png" id="1_bni6y"]
+[ext_resource type="Script" uid="uid://x4msa0t8mr2t" path="res://Scripts/bacgroundicon.gd" id="2_erols"]
+[ext_resource type="Texture2D" uid="uid://capci8ix28sj7" path="res://Assets/spirts/untitled-pixel-art@4x (3).png" id="2_hgmnv"]
+[ext_resource type="Texture2D" uid="uid://c3qoa1f2b27uo" path="res://Assets/other/untitled-pixel-art@4x (1).png" id="3_ws8o2"]
+[ext_resource type="Script" uid="uid://d1tw36t3023bj" path="res://Scripts/playericon.gd" id="3_xinh4"]
+[ext_resource type="Texture2D" uid="uid://ca2xvkcamwppq" path="res://Assets/Platforms/untitled@4x.png" id="4_08mul"]
+[ext_resource type="Texture2D" uid="uid://cto8l7b685mbg" path="res://Assets/Platforms/untitled-pixel-art@4x (2).png" id="5_kf43f"]
+[ext_resource type="FontFile" uid="uid://dnxg0k82syg2f" path="res://Assets/Fonts/Darrell-Regular.ttf" id="6_hy08x"]
+[ext_resource type="Script" uid="uid://cm7m47cx52lcj" path="res://Scripts/titel.gd" id="7_6qfdc"]
+[ext_resource type="Texture2D" uid="uid://bq4txyqgchg18" path="res://Assets/other/untitled-pixel-art@4x (2).png" id="7_kf43f"]
+[ext_resource type="Script" uid="uid://huh7i4inkmx0" path="res://Scripts/playboutton.gd" id="8_hy08x"]
+[ext_resource type="AudioStream" uid="uid://cvcjl0lrfdtba" path="res://Assets/Sounds/Start screen music.mp3" id="12_85f2q"]
+[ext_resource type="PackedScene" uid="uid://diaxoqnwshnlq" path="res://Sceans/volume.tscn" id="14_41317"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6qfdc"]
+font = ExtResource("6_hy08x")
+font_size = 168
+font_color = Color(1, 0, 0.18431373, 1)
+outline_size = 17
+shadow_size = 101
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Start" type="Node2D" unique_id=897872773]
+script = ExtResource("1_4vtkv")
+
+[node name="Bacground" type="Sprite2D" parent="." unique_id=633905020]
+texture_filter = 1
+position = Vector2(584.00006, 296)
+scale = Vector2(0.65949994, 0.651109)
+texture = ExtResource("1_bni6y")
+script = ExtResource("2_erols")
+
+[node name="Playericon" type="Sprite2D" parent="." unique_id=993276156]
+texture_filter = 1
+position = Vector2(898.0678, 353.76898)
+rotation = -0.19198622
+scale = Vector2(0.44959927, 0.47398645)
+texture = ExtResource("2_hgmnv")
+script = ExtResource("3_xinh4")
+
+[node name="Dust" type="Sprite2D" parent="Playericon" unique_id=600130168]
+position = Vector2(79.732056, 109.15088)
+rotation = -0.14766093
+scale = Vector2(0.32159153, 0.31652713)
+skew = -0.004913807
+texture = ExtResource("3_ws8o2")
+
+[node name="UntitledPixelArt_4x(1)2" type="Sprite2D" parent="Playericon" unique_id=447348595]
+position = Vector2(106.14612, 120.591064)
+rotation = -0.14766093
+scale = Vector2(0.32159153, 0.31652713)
+skew = -0.004913807
+texture = ExtResource("3_ws8o2")
+
+[node name="UntitledPixelArt_4x(1)3" type="Sprite2D" parent="Playericon" unique_id=184197691]
+modulate = Color(1, 0.21176471, 0.7294118, 0.7921569)
+position = Vector2(130.51819, 114.01294)
+rotation = -0.14766093
+scale = Vector2(0.32159153, 0.31652713)
+skew = -0.004913807
+texture = ExtResource("3_ws8o2")
+
+[node name="UntitledPixelArt_4x(1)4" type="Sprite2D" parent="Playericon" unique_id=159499253]
+modulate = Color(0.29586652, 0.2958665, 0.2958665, 1)
+position = Vector2(60.108765, 116.63672)
+rotation = -0.14766093
+scale = Vector2(0.32159153, 0.31652713)
+skew = -0.004913807
+texture = ExtResource("3_ws8o2")
+
+[node name="UntitledPixelArt_4x(1)5" type="Sprite2D" parent="Playericon" unique_id=318430543]
+modulate = Color(0.5211406, 0.5211406, 0.5211405, 1)
+position = Vector2(74.588745, 122.708984)
+rotation = -0.7555097
+scale = Vector2(0.3191838, 0.31895494)
+skew = -0.016600251
+texture = ExtResource("3_ws8o2")
+
+[node name="UntitledPixelArt_4x(1)6" type="Sprite2D" parent="Playericon" unique_id=1024321993]
+modulate = Color(1, 0.21176471, 0.7294118, 0.7921569)
+position = Vector2(97.73767, 105.32251)
+rotation = -0.14766093
+scale = Vector2(0.32159153, 0.31652713)
+skew = -0.004913807
+texture = ExtResource("3_ws8o2")
+
+[node name="UntitledPixelArt_4x(1)7" type="Sprite2D" parent="Playericon" unique_id=1483755298]
+modulate = Color(1, 1, 1, 0.43529412)
+position = Vector2(155.46619, 148.47473)
+rotation = -0.14766093
+scale = Vector2(0.32159153, 0.31652713)
+skew = -0.004913807
+texture = ExtResource("3_ws8o2")
+
+[node name="UntitledPixelArt_4x(1)8" type="Sprite2D" parent="Playericon" unique_id=1796582284]
+position = Vector2(111.803345, 144.97473)
+rotation = -0.14766093
+scale = Vector2(0.32159153, 0.31652713)
+skew = -0.004913807
+texture = ExtResource("3_ws8o2")
+
+[node name="UntitledPixelArt_4x(1)9" type="Sprite2D" parent="Playericon" unique_id=279650666]
+modulate = Color(0.5211406, 0.5211406, 0.5211405, 1)
+position = Vector2(97.88513, 115.65503)
+rotation = -0.7555097
+scale = Vector2(0.3191838, 0.31895494)
+skew = -0.016600251
+texture = ExtResource("3_ws8o2")
+
+[node name="UntitledPixelArt_4x(1)10" type="Sprite2D" parent="Playericon" unique_id=718911890]
+position = Vector2(152.95837, 123.760254)
+rotation = -0.14766093
+scale = Vector2(0.32159153, 0.31652713)
+skew = -0.004913807
+texture = ExtResource("3_ws8o2")
+
+[node name="UntitledPixelArt_4x(1)11" type="Sprite2D" parent="Playericon" unique_id=484040690]
+modulate = Color(1, 0.21176471, 0.7294118, 0.7921569)
+position = Vector2(129.8092, 141.14624)
+rotation = -0.14766093
+scale = Vector2(0.32159153, 0.31652713)
+skew = -0.004913807
+texture = ExtResource("3_ws8o2")
+
+[node name="UntitledPixelArt_4x(1)12" type="Sprite2D" parent="Playericon" unique_id=863197214]
+modulate = Color(1, 0.21176471, 0.7294118, 0.7921569)
+position = Vector2(168.65637, 131.6084)
+rotation = -0.14766093
+scale = Vector2(0.32159153, 0.31652713)
+skew = -0.004913807
+texture = ExtResource("3_ws8o2")
+
+[node name="UntitledPixelArt_4x(1)13" type="Sprite2D" parent="Playericon" unique_id=2023636760]
+modulate = Color(1, 1, 1, 0.43529412)
+position = Vector2(205.32898, 158.00732)
+rotation = -0.14766093
+scale = Vector2(0.32159153, 0.31652713)
+skew = -0.004913807
+texture = ExtResource("3_ws8o2")
+
+[node name="UntitledPixelArt_4x(1)14" type="Sprite2D" parent="Playericon" unique_id=1341946430]
+modulate = Color(1, 1, 1, 0.43529412)
+position = Vector2(222.27844, 134.58887)
+rotation = -0.14766093
+scale = Vector2(0.32159153, 0.31652713)
+skew = -0.004913807
+texture = ExtResource("3_ws8o2")
+
+[node name="Killblock" type="Sprite2D" parent="Playericon" unique_id=1343914074]
+texture_filter = 1
+position = Vector2(-352.90393, 118.11489)
+rotation = 0.051498547
+scale = Vector2(0.8290096, 2.3791149)
+skew = 0.0017369986
+texture = ExtResource("4_08mul")
+
+[node name="Platform" type="Sprite2D" parent="Playericon" unique_id=1516949705]
+texture_filter = 1
+position = Vector2(-65.56409, 167.01904)
+rotation = 0.05149856
+scale = Vector2(10.2986145, 5.650398)
+skew = 0.0017368793
+texture = ExtResource("5_kf43f")
+
+[node name="Titel" type="Label" parent="." unique_id=181816270]
+offset_left = 107.0
+offset_top = 73.0
+offset_right = 661.0
+offset_bottom = 240.0
+text = "Tricks"
+label_settings = SubResource("LabelSettings_6qfdc")
+script = ExtResource("7_6qfdc")
+
+[node name="Playboutton" type="TextureButton" parent="." unique_id=1526514973]
+texture_filter = 1
+offset_left = 196.0
+offset_top = 322.0
+offset_right = 452.0
+offset_bottom = 429.0
+scale = Vector2(0.9960937, 0.8931455)
+texture_normal = ExtResource("7_kf43f")
+script = ExtResource("8_hy08x")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=655707715]
+stream = ExtResource("12_85f2q")
+volume_db = 8.5
+autoplay = true
+
+[node name="Volume" parent="." unique_id=826977160 instance=ExtResource("14_41317")]
+anchors_preset = 0
+offset_left = 229.0
+offset_top = 461.0
+offset_right = 268.0
+offset_bottom = 489.0
